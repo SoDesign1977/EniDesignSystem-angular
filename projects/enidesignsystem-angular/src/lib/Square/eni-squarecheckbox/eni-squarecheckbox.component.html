@@ -1,0 +1,25 @@
+<div
+[class]="'eni-square eni-square-box ' + IsDisabled() "
+>
+<img [src]="icon" alt="Icon" />
+<button
+  role="checkbox"
+  [attr.aria-checked]="value"
+    (click)="handleChange()"
+  [class]="IsDisabled() + ' ' + IsSelected()"
+  [tabIndex]="disabled ? '-1':''"
+></button>
+<div class="eni-square-message">
+  <label [htmlFor]="name">{{title}}</label>
+</div>
+<input
+
+[name]="name"
+[id]="name"
+  class="eni-square-input"
+  type="text"
+  [value]="value"
+  [required]="required"
+
+>
+</div>

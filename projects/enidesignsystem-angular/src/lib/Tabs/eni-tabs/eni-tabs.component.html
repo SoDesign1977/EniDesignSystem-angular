@@ -1,0 +1,39 @@
+<div>
+  <div
+    class="eni-tabs-group"
+    role="tablist"
+    aria-label="labelpurposeoftheset"
+    aria-controls="IDREF"
+  >
+    <button
+      *ngFor="let element of Tabs; let index = index"
+      [id]="element.title + '-tabs'"
+      [class]="'eni-tabs ' + TabsShow(index, 'selected', '')"
+      [disabled]="element.disabled"
+      [attr.aria-selected]="TabsShow(index, true, false)"
+      role="tab"
+      aria-labelledby="{x}"
+      [attr.aria-controls]="element.title + '-tabs'"
+      (click)="setTabs(index)"
+    >
+      <div class="eni-tabs-img">
+        <img class="eni-tabs-img" [src]="element.icon" alt="Icon" />
+      </div>
+      <div class="eni-tabs-message">
+        <span id="{x}">{{ element.title }}</span>
+      </div>
+    </button>
+  </div>
+
+  <div class="eni-tabs-info-group">
+    <div
+      *ngFor="let element of Tabs; let index = index"
+      [class]="'eni-tabs-info elec ' + TabsShow(index, 'display', '')"
+      [attr.aria-labelledby]="element.title + '-tabs'"
+      tabIndex="0"
+      role="tabpanel"
+    >
+      <span>{{ element.components }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div *ngIf="arianne" class="eni-breadcrumb" aria-label="breadcrumb">
+    <span class="eni-breadcrumb-label">{{message}}</span>
+   <a *ngFor="let el of arianne; let index = index" href={{el.link}} class="eni-breadcrumb-level" [attr.aria-current]="current(index,arianne)" >
+       {{el.title}}
+    </a>
+</div>

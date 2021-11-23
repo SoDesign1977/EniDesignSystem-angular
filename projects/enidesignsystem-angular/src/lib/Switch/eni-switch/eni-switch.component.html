@@ -1,0 +1,24 @@
+<div class="eni-group-switch"  role="radiogroup">
+    <div
+    [class]="'eni-switch ' + valueIsDisabled() + ' ' + valueIsRequired()"
+    >
+      <input
+        (click)="setchecked()"
+        type="checkbox"
+        id="id"
+        [name]="name"
+        [checked]="checked"
+        [disabled]="disabled"
+        [attr.aria-required]="required"
+        [required]="required"
+        [(ngModel)]="checked"
+      />
+      <span class="eni-slider round"></span>
+    </div>
+    <label
+    [class]="'eni-switch-value eni-switch-label ' + valueIsDisabled() + ' ' + valueIsRequired()"
+      htmlFor={id}
+    >
+      {{title}}
+    </label>
+  </div>

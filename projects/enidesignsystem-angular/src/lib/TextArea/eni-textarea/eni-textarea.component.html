@@ -1,0 +1,24 @@
+<div class="eni-textarea-header">
+    <label 
+    [class]="'eni-textarea-label ' + valueIsDisabled() + ' ' + valueIsRequired()"
+    htmlFor={id}>
+     {{title}}
+    </label>
+    <span id="eni-textarea-caract">{{GetTextareaLength()}}</span>
+  </div>
+  <textarea
+    [attr.minLength]="minLength > 0 ? minLength : false"
+    [attr.maxLength]="maxLength > 0 ? maxLength : false "
+    class="form-control eni-textarea"
+    [rows]="4"
+    [cols]="50"
+    id="id"
+    [name]="name"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [attr.aria-required]="required"
+    [required]="required"
+    [(ngModel)]="value"
+    (myValueChange)="setValue(value)"
+  ></textarea>
+  <span class="error-message">{{errorMessage}}</span>

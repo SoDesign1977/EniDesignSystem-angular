@@ -1,0 +1,37 @@
+<fieldset
+class="eni-group-square"
+tabindex="0"
+aria-controls="condX"
+[attr.aria-labelledby]="name"
+role="group"
+>
+<input
+  class="eni-square-input"
+  type="text"
+  [name]="name"
+  [attr.aria-required]="required"
+  [required]="required"
+  [(ngModel)]="value"
+  minLength="1"
+>
+<legend [id]="name" class="eni-square-label">{{legend}}</legend>
+
+    <div
+    *ngFor="let element of ListSquare; let index = index"
+      [class]="'eni-square eni-square-box ' + IsDisabled(element)"
+    >
+      <img [src]="element.icon" alt="Icon" />
+      <button
+        (click)="handleChange(element.value)"
+        [id]="'cond'+index"
+        role="checkbox"
+        [attr.aria-checked]="element.value === value"
+        [class]="'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)"
+        [tabindex]="element.disabled ? '-1' : ''"
+      ></button>
+      <div class="eni-square-message">
+        <label [htmlFor]="'cond'+index">{{element.value}}</label>
+      </div>
+    </div>
+
+</fieldset>

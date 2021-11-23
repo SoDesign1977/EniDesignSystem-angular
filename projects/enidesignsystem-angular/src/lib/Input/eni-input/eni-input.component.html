@@ -1,0 +1,18 @@
+<label
+[class]="'eni-input-label ' + (required ? 'required ':'')  + (disabled ? 'disabled ':'')"
+htmlFor={{name}}
+>
+{{title}}
+</label>
+<input
+class="form-control eni-input"
+id={{name}}
+name={{name}}
+placeholder={{placeholder}}
+[disabled]="disabled"
+[attr.aria-required]="required"
+[required]="required"
+[type]="type"
+
+/>
+<span class="error-message">{{errorMessage}}</span>
