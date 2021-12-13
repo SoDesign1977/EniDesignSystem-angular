@@ -49,8 +49,9 @@
     }
     &:disabled {
       & ~ .eni-select .eni-select-box {
-        border: solid 2px $eniGrisNormal !important;
-        background-color: $eniGrisLightest !important;
+          background-color: $eniGrisClairLightest;
+          color: $eniGrisDark;
+          border: solid 1px $eniGrisNormal;
       }
       & ~ .eni-input-label {
         color: $eniGrisLighter;

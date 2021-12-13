@@ -15,8 +15,6 @@ export class EniCheckboxComponent implements OnInit {
   @Input()
   checked:boolean = false
 
-  @Input()
-  required:boolean = false
 
   @Input()
   name:string = "test"
@@ -28,9 +26,7 @@ export class EniCheckboxComponent implements OnInit {
   setchecked = ()=>{
     this.checked = !this.checked
   }
-  valueIsRequired = ()=>{
-    return this.required ? "required" : "";
-  }
+
    valueIsDisabled = ()=>{
     return this.disabled  ? "disabled" : "";
   }

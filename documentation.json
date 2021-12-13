@@ -44,12 +44,12 @@
         },
         {
             "name": "radioInterface",
-            "id": "interface-radioInterface-bc6b87ad51351686dd50a64c920724f7",
-            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/eni-radio.component.ts",
+            "id": "interface-radioInterface-982cb6c739b6f6581539c74878240db5",
+            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/eni-radio-button.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio',\n  templateUrl: './eni-radio.component.html',\n  styleUrls: ['./eni-radio.component.scss']\n})\nexport class EniRadioComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked\" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n    let x = \"\";\n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = x;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
+            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio-button',\n  templateUrl: './eni-radio-button.component.html',\n  styleUrls: ['./eni-radio-button.component.scss']\n})\nexport class EniRadioButtonComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked \" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n  \n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = element.value;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
             "properties": [
                 {
                     "name": "checked",
@@ -82,6 +82,50 @@
             "indexSignatures": [],
             "kind": 164,
             "methods": []
+        },
+        {
+            "name": "radioInterface",
+            "id": "interface-radioInterface-493f3e305640ad1026db2341582abfc1-1",
+            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/eni-radio-text.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio-text',\n  templateUrl: './eni-radio-text.component.html',\n  styleUrls: ['./eni-radio-text.component.scss']\n})\nexport class EniRadioTextComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked \" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = element.value;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
+            "properties": [
+                {
+                    "name": "checked",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": true,
+                    "description": "",
+                    "line": 56
+                },
+                {
+                    "name": "disabled",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": true,
+                    "description": "",
+                    "line": 55
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 54
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 164,
+            "methods": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "radioInterface-1"
         },
         {
             "name": "Selectinterface",
@@ -170,12 +214,12 @@
         },
         {
             "name": "squareInterface",
-            "id": "interface-squareInterface-3fd057f384a8bcadb8cfd7a401c30885",
+            "id": "interface-squareInterface-f8e370e8370240db73e51ce108455a0f",
             "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarelistcheckbox',\n  templateUrl: './eni-squarelistcheckbox.component.html',\n  styleUrls: ['./eni-squarelistcheckbox.component.scss']\n})\nexport class EniSquarelistcheckboxComponent implements OnInit {\n\n  constructor() { }\n  @Input()\n  legend:string = \"Label\"\n\n  @Input()\n  ListSquare:squareInterface[] = []\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  value:string[] = []\n \n  \n\nconditional = (variable:any,equal:any,vartrue:any,varfalse:any)=>{\n  console.log(variable,equal)\n  return variable === equal ? vartrue : varfalse\n}\nIsSelected = (element:squareInterface)=>{\n  return this.value.includes(element.value) ? \"selected\" : \"\"\n}\nIsDisabled = (element:squareInterface)=>{\n  return element.disabled ? \"disabled\" : \"\";\n}\nhandleChange = (data:string) => {\n  if (this.value.includes(data)) {\n    this.value =  this.value.filter(function (val) {\n        return val !== data;\n      })\n  } else {\n    this.value = [...this.value, data];\n  }\n};\n  ngOnInit(): void {\n  }\n\n}\ninterface squareInterface {\n  value:string,\n  icon:string,\n  disabled:boolean,\n}",
+            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarelistcheckbox',\n  templateUrl: './eni-squarelistcheckbox.component.html',\n  styleUrls: ['./eni-squarelistcheckbox.component.scss']\n})\nexport class EniSquarelistcheckboxComponent implements OnInit {\n\n  constructor() { }\n  @Input()\n  legend:string = \"Label\"\n\n  @Input()\n  ListSquare:squareInterface[] = []\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  value:string[] = []\n \n  \n\nconditional = (variable:any,equal:any,vartrue:any,varfalse:any)=>{\n  return variable === equal ? vartrue : varfalse\n}\nIsSelected = (element:squareInterface)=>{\n  return this.value.includes(element.value) ? \"selected\" : \"\"\n}\nIsDisabled = (element:squareInterface)=>{\n  return element.disabled ? \"disabled\" : \"\";\n}\nhandleChange = (data:string) => {\n  if (this.value.includes(data)) {\n    this.value =  this.value.filter(function (val) {\n        return val !== data;\n      })\n  } else {\n    this.value = [...this.value, data];\n  }\n};\n  ngOnInit(): void {\n  }\n\n}\ninterface squareInterface {\n  value:string,\n  icon:string,\n  disabled:boolean,\n}",
             "properties": [
                 {
                     "name": "disabled",
@@ -184,7 +228,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 54
+                    "line": 53
                 },
                 {
                     "name": "icon",
@@ -193,7 +237,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 53
+                    "line": 52
                 },
                 {
                     "name": "value",
@@ -202,7 +246,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 52
+                    "line": 51
                 }
             ],
             "indexSignatures": [],
@@ -646,7 +690,7 @@
         },
         {
             "name": "EniCheckboxComponent",
-            "id": "component-EniCheckboxComponent-b353fa9657fb8347d00828b33ae15722",
+            "id": "component-EniCheckboxComponent-e3695be63554591e74af4b07b865d721",
             "file": "projects/enidesignsystem-angular/src/lib/Checkbox/eni-checkbox/eni-checkbox.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -676,7 +720,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 23,
                     "type": "boolean"
                 },
                 {
@@ -684,16 +728,8 @@
                     "defaultValue": "\"test\"",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 20,
                     "type": "string"
-                },
-                {
-                    "name": "required",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 19,
-                    "type": "boolean"
                 },
                 {
                     "name": "title",
@@ -714,7 +750,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 28
+                    "line": 26
                 },
                 {
                     "name": "valueIsDisabled",
@@ -724,17 +760,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 34
-                },
-                {
-                    "name": "valueIsRequired",
-                    "defaultValue": "() => {...}",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "optional": false,
-                    "description": "",
-                    "line": 31
+                    "line": 30
                 },
                 {
                     "name": "valueIsSelected",
@@ -744,7 +770,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 37
+                    "line": 33
                 }
             ],
             "methodsClass": [
@@ -754,7 +780,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 40,
+                    "line": 36,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -766,11 +792,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'app-eni-checkbox',\n  templateUrl: './eni-checkbox.component.html',\n  styleUrls: ['./eni-checkbox.component.scss']\n})\nexport class EniCheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  @Input()\n  title:string = \"Label\"\n\n  @Input()\n  checked:boolean = false\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  disabled:boolean = false\n \n  \n  setchecked = ()=>{\n    this.checked = !this.checked\n  }\n  valueIsRequired = ()=>{\n    return this.required ? \"required\" : \"\";\n  }\n   valueIsDisabled = ()=>{\n    return this.disabled  ? \"disabled\" : \"\";\n  }\n  valueIsSelected = ()=>{\n    return this.checked  ? \"selected\" : \"\";\n  }\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'app-eni-checkbox',\n  templateUrl: './eni-checkbox.component.html',\n  styleUrls: ['./eni-checkbox.component.scss']\n})\nexport class EniCheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  @Input()\n  title:string = \"Label\"\n\n  @Input()\n  checked:boolean = false\n\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  disabled:boolean = false\n \n  \n  setchecked = ()=>{\n    this.checked = !this.checked\n  }\n\n   valueIsDisabled = ()=>{\n    return this.disabled  ? \"disabled\" : \"\";\n  }\n  valueIsSelected = ()=>{\n    return this.checked  ? \"selected\" : \"\";\n  }\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-checkbox{\r\n    &:focus {\r\n        border: 1px solid $eniBleuNormal;\r\n      }\r\n      cursor: pointer;\r\n      display: flex;\r\n      justify-content: flex-start;\r\n      align-items: center;\r\n      min-height: 18px;\r\n      margin: 4px;\r\n      overflow-wrap: anywhere;\r\n      span {\r\n        margin-left: 8px;\r\n        @extend %TextNormal;\r\n      }\r\n      &:not(.selected) svg {\r\n        visibility: hidden;\r\n      }\r\n      &.selected svg {\r\n        position: absolute;\r\n        right: 8px;\r\n      }\r\n      &.disabled {\r\n        color: $eniGrisLighter;\r\n        cursor: unset;\r\n      }\r\n      &.disabled:hover {\r\n        background-color: unset;\r\n      }\r\n      & .checkbox {\r\n        cursor: pointer;\r\n        appearance: none;\r\n        background-color: unset;\r\n        position: relative;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin-left: 8px;\r\n        width: 18px;\r\n        height: 18px;\r\n        border: 1px solid $eniJauneNormal;\r\n      }\r\n      &:not(.selected) .checkbox svg {\r\n        visibility: hidden;\r\n      }\r\n      &.selected .checkbox svg {\r\n        right: unset;\r\n        width: 90%;\r\n        height: 90%;\r\n    \r\n        path {\r\n          fill: $eniGrisDarker;\r\n        }\r\n      }\r\n    \r\n      &.disabled .checkbox {\r\n        cursor: unset;\r\n        border: solid 1px $eniGrisLight;\r\n        background-color: $eniGrisLightest;\r\n      }\r\n    \r\n      & ~ input{\r\n        width: 0;\r\n        height: 0;\r\n        appearance: none;\r\n        position: absolute;\r\n        border: unset;\r\n        outline: none;\r\n      }\r\n    }",
+                    "data": "@import '../../styles/index.scss';\r\n.eni-checkbox{\r\n  &:focus {\r\n      border: 1px solid $eniBleuNormal;\r\n    }\r\n    cursor: pointer;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    min-height: 18px;\r\n    margin: 4px;\r\n    overflow-wrap: anywhere;\r\n    span {\r\n      margin-left: 8px;\r\n      @extend %TextNormal;\r\n    }\r\n    &:not(.selected) svg {\r\n      visibility: hidden;\r\n    }\r\n    &.selected svg {\r\n      position: absolute;\r\n      right: 8px;\r\n    }\r\n    &.disabled {\r\n    \r\n      color: $eniGrisLighter;\r\n      cursor: unset;\r\n    }\r\n    &.disabled:hover {\r\n      background-color: unset;\r\n    }\r\n    & .checkbox {\r\n      cursor: pointer;\r\n      appearance: none;\r\n      background-color: unset;\r\n      position: relative;\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      margin-left: 8px;\r\n      width: 24px;\r\n      height: 24px;\r\n      border: 2px solid $eniJauneNormal;\r\n    }\r\n    &:not(.selected) .checkbox svg {\r\n      visibility: hidden;\r\n    }\r\n    &.selected .checkbox svg {\r\n      right: unset;\r\n  \r\n  \r\n      path {\r\n        fill: $eniGrisDarker;\r\n      }\r\n    }\r\n  \r\n    &.disabled .checkbox {\r\n      cursor: unset;\r\n      border: solid 1px $eniGrisLight;\r\n      background-color: $eniGrisClairLightest;\r\n    }\r\n    &.selected .checkbox {\r\n      border: 2px solid $eniJauneNormal;\r\n    }\r\n    & ~ input{\r\n      width: 0;\r\n      height: 0;\r\n      appearance: none;\r\n      position: absolute;\r\n      border: unset;\r\n      outline: none;\r\n    }\r\n  }\r\n",
                     "styleUrl": "./eni-checkbox.component.scss"
                 }
             ],
@@ -786,7 +812,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\n<div\nrole=\"checkbox\"\naria-checked={value}\n(click)=\"setchecked()\"\n[class]=\"'eni-checkbox ' + valueIsDisabled() + ' ' + valueIsSelected()\"\n>\n<button class=\"checkbox\" [attr.aria-labelledby]=\"name\" [disabled]=\"disabled\">\n    <svg width=\"16\" height=\"12\" viewBox=\"0 0 16 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M15.6577 0.552804C15.1843 0.0536718 14.3951 0.0316887 13.8952 0.506255L5.93607 8.05445L2.13978 4.15671C1.65897 3.6634 0.870626 3.65259 0.376899 4.13346C-0.116408 4.61386 -0.126799 5.40304 0.353594 5.89634L5.00808 10.6751C5.252 10.9257 5.57617 11.052 5.90118 11.052C6.20955 11.052 6.51791 10.9381 6.75937 10.71L15.6112 2.31532C16.1107 1.84154 16.1318 1.05236 15.6577 0.552804Z\" fill=\"#808080\"/>\n        </svg>        \n</button>\n<span id={name}>{{title}}</span>\n</div>\n<input\nclass=\"eni-select-input\"\ntype=\"checkbox\"\n[name]=\"name\"\n[checked]=\"checked\"\n[disabled]=\"disabled\"\n[attr.aria-required]=\"required\"\n[required]=\"required\"\n[(ngModel)]=\"checked\"\n>\n</div>"
+            "templateData": "<div>\n<div\nrole=\"checkbox\"\naria-checked={value}\n(click)=\"setchecked()\"\n[class]=\"'eni-checkbox ' + valueIsDisabled() + ' ' + valueIsSelected()\"\n>\n<button class=\"checkbox\" [attr.aria-labelledby]=\"name\" [disabled]=\"disabled\">\n    <svg width=\"16\" height=\"12\" viewBox=\"0 0 16 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M15.6577 0.552804C15.1843 0.0536718 14.3951 0.0316887 13.8952 0.506255L5.93607 8.05445L2.13978 4.15671C1.65897 3.6634 0.870626 3.65259 0.376899 4.13346C-0.116408 4.61386 -0.126799 5.40304 0.353594 5.89634L5.00808 10.6751C5.252 10.9257 5.57617 11.052 5.90118 11.052C6.20955 11.052 6.51791 10.9381 6.75937 10.71L15.6112 2.31532C16.1107 1.84154 16.1318 1.05236 15.6577 0.552804Z\" fill=\"#808080\"/>\n        </svg>        \n</button>\n<span id={name}>{{title}}</span>\n</div>\n<input\nclass=\"eni-select-input\"\ntype=\"checkbox\"\n[name]=\"name\"\n[checked]=\"checked\"\n[disabled]=\"disabled\"\n\n[(ngModel)]=\"checked\"\n>\n</div>"
         },
         {
             "name": "EnidesignsystemAngularComponent",
@@ -1086,7 +1112,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-group-checkbox {\r\n    width: fit-content;\r\n    .eni-checkbox-input {\r\n      width: 0;\r\n      height: 0;\r\n      appearance: none;\r\n      position: absolute;\r\n      border: unset;\r\n      outline: none;\r\n    }\r\n  \r\n    .eni-group-checkbox-label {\r\n      display: block;\r\n      color: $eniGrisDarkest;\r\n      font-family: $OpenSansSemiBold;\r\n      font-size: 16px;\r\n      margin-bottom: 8px;\r\n    }\r\n  \r\n    .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {\r\n      content: \" *\";\r\n      color: $eniRougeNormal;\r\n      font-family: $OpenSansSemiBold;\r\n      font-size: 16px;\r\n    }\r\n  \r\n    .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {\r\n      color: $eniGrisLighter;\r\n    }\r\n  \r\n    .eni-checkbox-input:disabled ~ .eni-group-checkbox-label:after {\r\n      color: $eniGrisLighter;\r\n    }\r\n    li {\r\n      &:focus {\r\n        border: 1px solid $eniBleuNormal;\r\n      }\r\n      cursor: pointer;\r\n      display: flex;\r\n      justify-content: flex-start;\r\n      align-items: center;\r\n      min-height: 18px;\r\n      margin: 4px;\r\n      overflow-wrap: anywhere;\r\n      span {\r\n        margin-left: 8px;\r\n        @extend %TextNormal;\r\n      }\r\n      &:not(.selected) svg {\r\n        visibility: hidden;\r\n      }\r\n      &.selected svg {\r\n        position: absolute;\r\n        right: 8px;\r\n      }\r\n      &.disabled {\r\n        color: $eniGrisLighter;\r\n        cursor: unset;\r\n      }\r\n      &.disabled:hover {\r\n        background-color: unset;\r\n      }\r\n      & .checkbox {\r\n        cursor: pointer;\r\n        appearance: none;\r\n        background-color: unset;\r\n        position: relative;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        margin-left: 8px;\r\n        width: 18px;\r\n        height: 18px;\r\n        border: 1px solid $eniJauneNormal;\r\n      }\r\n      &:not(.selected) .checkbox svg {\r\n        visibility: hidden;\r\n      }\r\n      &.selected .checkbox svg {\r\n        right: unset;\r\n        width: 90%;\r\n        height: 90%;\r\n  \r\n        path {\r\n          fill: $eniGrisDarker;\r\n        }\r\n      }\r\n  \r\n      &.disabled .checkbox {\r\n        cursor: unset;\r\n        border: solid 1px $eniGrisLight;\r\n        background-color: $eniGrisLightest;\r\n      }\r\n    }\r\n  \r\n  }\r\n  ",
+                    "data": "@import '../../styles/index.scss';\r\n\r\n.eni-group-checkbox {\r\n  width: fit-content;\r\n  .eni-checkbox-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n\r\n  .eni-group-checkbox-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-bottom: 8px;\r\n  }\r\n  \r\n\r\n  .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n\r\n  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {\r\n    color: $eniGrisLighter;\r\n  }\r\n\r\n  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  li {\r\n    &:focus {\r\n      border: 1px solid $eniBleuNormal;\r\n    }\r\n    cursor: pointer;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    min-height: 18px;\r\n    margin: 4px;\r\n    overflow-wrap: anywhere;\r\n    span {\r\n      margin-left: 8px;\r\n      @extend %TextNormal;\r\n    }\r\n    &:not(.selected) svg {\r\n      visibility: hidden;\r\n    }\r\n    &.selected svg {\r\n      position: absolute;\r\n      right: 8px;\r\n    }\r\n    &.disabled {\r\n      color: $eniGrisLighter;\r\n      cursor: unset;\r\n    }\r\n    &.disabled:hover {\r\n      background-color: unset;\r\n    }\r\n    & .checkbox {\r\n      cursor: pointer;\r\n      appearance: none;\r\n      background-color: unset;\r\n      position: relative;\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      margin-left: 8px;\r\n      width: 24px;\r\n      height: 24px;\r\n      border: 1px solid $eniJauneNormal;\r\n    }\r\n    &:not(.selected) .checkbox svg {\r\n      visibility: hidden;\r\n    }\r\n    &.selected .checkbox svg {\r\n      right: unset;\r\n\r\n      path {\r\n        fill: $eniGrisDarker;\r\n      }\r\n    }\r\n    &.selected .checkbox {\r\n      border: 2px solid $eniJauneNormal;\r\n    }\r\n    &.disabled .checkbox {\r\n      cursor: unset;\r\n      border: solid 1px $eniGrisLight;\r\n      background-color: $eniGrisClairLightest;\r\n    }\r\n  }\r\n\r\n}\r\n",
                     "styleUrl": "./eni-listcheckbox.component.scss"
                 }
             ],
@@ -1229,24 +1255,24 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div\n[class]=\"'eni-modale eni-modale-'+state + openclass \"\n\nrole=\"dialog\"\n[attr.aria-labelledby]=\"title\"\ntabIndex=\"0\"\n[attr.aria-modal]=\"openStatus\"\n\nngModel #modale\n>\n<div class=\"eni-modale-container\">\n  <h1 id=\"title\">{{title}}</h1>\n\n\n    <svg  *ngIf=\"state === 'error'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M31.25 38H33.75V41H31.25V38ZM31.25 26H33.75V35.0869H31.25V26Z\" fill=\"#D0003E\"/>\n        <path d=\"M29.9379 1.47369C31.0766 -0.491226 33.9234 -0.49123 35.0621 1.47368L64.0992 51.5789C65.2379 53.5439 63.8146 56 61.5371 56H3.46287C1.18545 56 -0.237939 53.5439 0.900771 51.5789L29.9379 1.47369Z\" fill=\"#D0003E\" fill-opacity=\"0.15\"/>\n        </svg>\n        \n\n        <svg *ngIf=\"state === 'success'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <circle cx=\"32.5\" cy=\"32\" r=\"32\" fill=\"#51A126\" fill-opacity=\"0.15\"/>\n            <path d=\"M29 36.865L24.135 32L22.4784 33.645L29 40.1666L43 26.1666L41.355 24.5216L29 36.865Z\" fill=\"#51A126\"/>\n            </svg>\n            \n\n        <svg *ngIf=\"state === 'info'\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <circle cx=\"32\" cy=\"32\" r=\"32\" fill=\"#006699\" fill-opacity=\"0.15\"/>\n            <path d=\"M32.0003 27.983C30.9775 27.983 30.1484 28.7796 30.1484 29.7623V41.2207C30.1484 42.2034 30.9775 43 32.0003 43C33.0231 43 33.8521 42.2033 33.8521 41.2206V29.7623C33.8521 28.7796 33.0231 27.983 32.0003 27.983Z\" fill=\"#006699\"/>\n            <path d=\"M32 25.8042C33.3807 25.8042 34.5 24.7288 34.5 23.4021C34.5 22.0755 33.3807 21 32 21C30.6193 21 29.5 22.0755 29.5 23.4021C29.5 24.7288 30.6193 25.8042 32 25.8042Z\" fill=\"#006699\"/>\n            </svg>\n            \n\n\n  <div class=\"eni-modale-content\"><ng-content></ng-content></div>\n  <div *ngIf=\"closeButton\">\n      <span id=\"Access-Close-Button\">Fermer</span>\n      <button\n        (click)=\"closeAction()\"\n        aria-labelledby=\"Access-Close-Button\"\n        class=\"eni-modale-button\"\n      >\n      \n      <svg class=\"eni-close\" width=\"68\" height=\"68\" viewBox=\"0 0 68 68\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g filter=\"url(#filter0_d)\">\n        <circle cx=\"34\" cy=\"32\" r=\"24\" fill=\"white\"/>\n        </g>\n        <path d=\"M42.1673 25.4785L40.5223 23.8335L34.0007 30.3552L27.479 23.8335L25.834 25.4785L32.3557 32.0002L25.834 38.5218L27.479 40.1668L34.0007 33.6452L40.5223 40.1668L42.1673 38.5218L35.6457 32.0002L42.1673 25.4785Z\" fill=\"#323232\"/>\n        <defs>\n        <filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"68\" height=\"68\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n        <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n        <feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/>\n        <feOffset dy=\"2\"/>\n        <feGaussianBlur stdDeviation=\"5\"/>\n        <feColorMatrix type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0\"/>\n        <feBlend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/>\n        <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/>\n        </filter>\n        </defs>\n        </svg>\n        \n      </button>\n    </div>\n</div>\n</div>"
+            "templateData": "<div\n[class]=\"'eni-modale eni-modale-'+state + openclass \"\n\nrole=\"dialog\"\n[attr.aria-labelledby]=\"title\"\ntabIndex=\"0\"\n[attr.aria-modal]=\"openStatus\"\n\nngModel #modale\n>\n<div class=\"eni-modale-container\">\n  <svg  *ngIf=\"state === 'error'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M31.25 38H33.75V41H31.25V38ZM31.25 26H33.75V35.0869H31.25V26Z\" fill=\"#D0003E\"/>\n    <path d=\"M29.9379 1.47369C31.0766 -0.491226 33.9234 -0.49123 35.0621 1.47368L64.0992 51.5789C65.2379 53.5439 63.8146 56 61.5371 56H3.46287C1.18545 56 -0.237939 53.5439 0.900771 51.5789L29.9379 1.47369Z\" fill=\"#D0003E\" fill-opacity=\"0.15\"/>\n    </svg>\n    \n\n    <svg *ngIf=\"state === 'success'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32.5\" cy=\"32\" r=\"32\" fill=\"#51A126\" fill-opacity=\"0.15\"/>\n        <path d=\"M29 36.865L24.135 32L22.4784 33.645L29 40.1666L43 26.1666L41.355 24.5216L29 36.865Z\" fill=\"#51A126\"/>\n        </svg>\n        \n\n    <svg *ngIf=\"state === 'info'\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32\" cy=\"32\" r=\"32\" fill=\"#006699\" fill-opacity=\"0.15\"/>\n        <path d=\"M32.0003 27.983C30.9775 27.983 30.1484 28.7796 30.1484 29.7623V41.2207C30.1484 42.2034 30.9775 43 32.0003 43C33.0231 43 33.8521 42.2033 33.8521 41.2206V29.7623C33.8521 28.7796 33.0231 27.983 32.0003 27.983Z\" fill=\"#006699\"/>\n        <path d=\"M32 25.8042C33.3807 25.8042 34.5 24.7288 34.5 23.4021C34.5 22.0755 33.3807 21 32 21C30.6193 21 29.5 22.0755 29.5 23.4021C29.5 24.7288 30.6193 25.8042 32 25.8042Z\" fill=\"#006699\"/>\n        </svg>\n        \n  <h1 id=\"title\">{{title}}</h1>\n\n\n\n\n\n  <div class=\"eni-modale-content\"><ng-content></ng-content></div>\n  <div *ngIf=\"closeButton\">\n      <span id=\"Access-Close-Button\">Fermer</span>\n      <button\n        (click)=\"closeAction()\"\n        aria-labelledby=\"Access-Close-Button\"\n        class=\"eni-modale-button\"\n      >\n      \n      <svg class=\"eni-close\" width=\"68\" height=\"68\" viewBox=\"0 0 68 68\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g filter=\"url(#filter0_d)\">\n        <circle cx=\"34\" cy=\"32\" r=\"24\" fill=\"white\"/>\n        </g>\n        <path d=\"M42.1673 25.4785L40.5223 23.8335L34.0007 30.3552L27.479 23.8335L25.834 25.4785L32.3557 32.0002L25.834 38.5218L27.479 40.1668L34.0007 33.6452L40.5223 40.1668L42.1673 38.5218L35.6457 32.0002L42.1673 25.4785Z\" fill=\"#323232\"/>\n        <defs>\n        <filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"68\" height=\"68\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n        <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n        <feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/>\n        <feOffset dy=\"2\"/>\n        <feGaussianBlur stdDeviation=\"5\"/>\n        <feColorMatrix type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0\"/>\n        <feBlend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/>\n        <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/>\n        </filter>\n        </defs>\n        </svg>\n        \n      </button>\n    </div>\n</div>\n</div>"
         },
         {
-            "name": "EniRadioComponent",
-            "id": "component-EniRadioComponent-bc6b87ad51351686dd50a64c920724f7",
-            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/eni-radio.component.ts",
+            "name": "EniRadioButtonComponent",
+            "id": "component-EniRadioButtonComponent-982cb6c739b6f6581539c74878240db5",
+            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/eni-radio-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "lib-eni-radio",
+            "selector": "lib-eni-radio-button",
             "styleUrls": [
-                "./eni-radio.component.scss"
+                "./eni-radio-button.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./eni-radio.component.html"
+                "./eni-radio-button.component.html"
             ],
             "viewProviders": [],
             "inputsClass": [
@@ -1343,12 +1369,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio',\n  templateUrl: './eni-radio.component.html',\n  styleUrls: ['./eni-radio.component.scss']\n})\nexport class EniRadioComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked\" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n    let x = \"\";\n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = x;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
+            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio-button',\n  templateUrl: './eni-radio-button.component.html',\n  styleUrls: ['./eni-radio-button.component.scss']\n})\nexport class EniRadioButtonComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked \" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n  \n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = element.value;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-group-radio-button {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: fit-content;\r\n  }\r\n  \r\n  .eni-group-radio-button-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    @extend %TextSemiBoldNormal;\r\n    margin-bottom: 8px;\r\n  }\r\n  \r\n  .eni-radio-input ~ .eni-group-radio-button-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    @extend %TextSemiBoldNormal;\r\n  }\r\n  \r\n  .eni-group-radio-button-label.disabled {\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-group-radio-button-label.disabled:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-radio-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  \r\n  .eni-radio-button {\r\n    background-color: unset;\r\n    appearance: none;\r\n    cursor: pointer;\r\n    border: 2px solid transparent;\r\n    border-radius: 5px;\r\n    display: inline-block;\r\n    position: relative;\r\n    padding: 0.125em;\r\n    padding-left: 1.5em;\r\n    padding-right: 0.5em;\r\n    @extend %TextNormal;\r\n    outline: none;\r\n  \r\n    &::before,\r\n    &::after {\r\n      position: absolute;\r\n      top: 50%;\r\n      left: 7px;\r\n      transform: translate(-20%, -50%);\r\n      content: \"\";\r\n    }\r\n    &::before {\r\n      width: 18px;\r\n      height: 18px;\r\n      border: 1px solid $eniGrisDarker;\r\n      border-radius: 100%;\r\n  \r\n    }\r\n    &[aria-checked=\"true\"]::after {\r\n      display: block;\r\n      background-color: $eniNoir;\r\n      width: 8px;\r\n      height: 8px;\r\n      border-radius: 100%;\r\n      transform: translate(20%, -50%);\r\n    }\r\n  \r\n    &[aria-checked=\"true\"]::before {\r\n      border: 2px solid $eniJauneLight;\r\n    }\r\n  \r\n    &:hover::before,\r\n    &:focus::before {\r\n      border: 2px solid $eniJauneLight;\r\n    }\r\n   \r\n    &.disabled{\r\n      color: $eniGrisLighter;\r\n      cursor: unset;\r\n      &:before{\r\n        border: 1px solid $eniGrisLighter;\r\n      }\r\n  \r\n    }\r\n  }\r\n  ",
-                    "styleUrl": "./eni-radio.component.scss"
+                    "data": "@import '../../styles/index.scss';\r\n.eni-group-radio-button {\r\n  display: flex;\r\n  flex-direction: column;\r\n\r\n}\r\n\r\n.eni-group-radio-button-label {\r\n  display: block;\r\n  color: $eniGrisDarkest;\r\n  @extend %TextSemiBoldNormal;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.eni-radio-input ~ .eni-group-radio-button-label:after {\r\n  content: \" *\";\r\n  color: $eniRougeNormal;\r\n  @extend %TextSemiBoldNormal;\r\n}\r\n\r\n.eni-group-radio-button-label.disabled {\r\n  color: $eniGrisLighter;\r\n}\r\n\r\n.eni-group-radio-button-label.disabled:after {\r\n  color: $eniGrisLighter;\r\n}\r\n.eni-radio-input {\r\n  width: 0;\r\n  height: 0;\r\n  appearance: none;\r\n  position: absolute;\r\n  border: unset;\r\n  outline: none;\r\n}\r\n.eni-group-radio-button{\r\n.eni-radio-button {\r\n  padding: $MargeXSmall;\r\n  margin: $MargeLarge;\r\n  background-color: unset;\r\n  appearance: none;\r\n  cursor: pointer;\r\n  border: 1px solid $eniGrisLightest;\r\n  border-radius: 5px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding-left: 32px;\r\n  @extend %TextNormal;\r\n  outline: none;\r\n  width: fit-content;\r\n\r\n  &::before,\r\n  &::after {\r\n    margin-left: $MargeXSmall;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 7px;\r\n    transform: translate(-20%, -50%);\r\n    content: \"\";\r\n  }\r\n  &::before {\r\n    width: 18px;\r\n    height: 18px;\r\n    border: 1px solid $eniGrisDarker;\r\n    border-radius: 100%;\r\n\r\n  }\r\n  &[aria-checked=\"true\"]::after {\r\n    display: block;\r\n    background-color: $eniNoir;\r\n    width: 8px;\r\n    height: 8px;\r\n    border-radius: 100%;\r\n    transform: translate(20%, -50%);\r\n  }\r\n\r\n  &[aria-checked=\"true\"]::before {\r\n    border: 2px solid $eniJauneNormal;\r\n\r\n  }\r\n  &[aria-checked=\"true\"] span {\r\n    @extend %TextSemiBoldNormal;\r\n \r\n  }\r\n  &[aria-checked=\"true\"]{\r\n    background-color: $eniJauneLightest;\r\n    border-color: $eniJauneNormal;\r\n  }\r\n  &:hover::before,\r\n  &:focus::before,&:hover {\r\n    border-color: $eniJauneNormal;\r\n  }\r\n \r\n  &.disabled{\r\n    color: $eniGrisLighter;\r\n    cursor: unset;\r\n    border-color: $eniGrisNormal;\r\n    background-color: $eniGrisClairLightest;\r\n    &:before{\r\n   \r\n      border: 1px solid $eniGrisLighter;\r\n    }\r\n\r\n  }\r\n \r\n  span{\r\n    padding-left: $MargeXSmall;\r\n  }\r\n}\r\n}\r\n",
+                    "styleUrl": "./eni-radio-button.component.scss"
                 }
             ],
             "stylesData": "",
@@ -1363,7 +1389,141 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<fieldset\nclass=\"eni-group-radio-button\"\nrole=\"radiogroup\"\n[attr.aria-labelledby]=\"name\"\n>\n<input\n\n  [name]=\"name\"\n  type=\"text\"\n  class=\"eni-radio-input\"\n  [required]=\"required\"\n  minLength=\"1\"\n    [(ngModel)]=\"value\"\n\n>\n<legend [id]=\"name\" class=\"eni-group-radio-button-label\" >\n {{title}}\n</legend>\n\n\n\n    <button\n    *ngFor=\"let element of radio; let index = index\"\n      role=\"radio\"\n      [disabled]=\"element.disabled\"\n      [class]=\"'eni-radio-button ' + valueIsDisabled(element) + ' ' + valueIsCheck(element)\"\n\n      [attr.aria-checked]=\"element.value === value ? true : false\"\n      (click)=\"valueSetter(element)\"\n    >\n      {{element.value}}\n    </button>\n\n</fieldset>"
+            "templateData": "<fieldset\nclass=\"eni-group-radio-button\"\nrole=\"radiogroup\"\n[attr.aria-labelledby]=\"name\"\n>\n<input\n\n  [name]=\"name\"\n  type=\"text\"\n  class=\"eni-radio-input\"\n  [required]=\"required\"\n  minLength=\"1\"\n    [(ngModel)]=\"value\"\n\n>\n<legend [id]=\"name\" class=\"eni-group-radio-button-label\" >\n {{title}}\n</legend>\n\n\n\n    <button\n    *ngFor=\"let element of radio; let index = index\"\n      role=\"radio\"\n      [disabled]=\"element.disabled\"\n      [class]=\"'eni-radio-button ' + valueIsDisabled(element) + ' ' + valueIsCheck(element)\"\n\n      [attr.aria-checked]=\"element.value === value ? true : false\"\n      (click)=\"valueSetter(element)\"\n    >\n      <span>{{element.value}}</span>\n    </button>\n\n</fieldset>"
+        },
+        {
+            "name": "EniRadioTextComponent",
+            "id": "component-EniRadioTextComponent-493f3e305640ad1026db2341582abfc1",
+            "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/eni-radio-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "lib-eni-radio-text",
+            "styleUrls": [
+                "./eni-radio-text.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./eni-radio-text.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "name",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string"
+                },
+                {
+                    "name": "radio",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "radioInterface[]"
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "boolean"
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "\"Vous êtes ici :\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "valueIsCheck",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "valueIsDisabled",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 38
+                },
+                {
+                    "name": "valueSetter",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 42,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';\n\n@Component({\n\n  selector: 'lib-eni-radio-text',\n  templateUrl: './eni-radio-text.component.html',\n  styleUrls: ['./eni-radio-text.component.scss']\n})\nexport class EniRadioTextComponent implements OnInit {\n\n  constructor() { }\n\n\n  @Input()\n  radio:radioInterface[] = []\n\n  @Input()\n  title:string = \"Vous êtes ici :\"\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"\"\n\n\n  @Input()\n  value:string = \"\"\n \n   valueSetter = (element:radioInterface)=>{\n    if (!element.disabled) {\n      this.value=element.value;\n    }\n  }\n   valueIsCheck = (element:radioInterface)=>{\n    return this.value===element.value ? \"checked \" : \"\";\n  }\n   valueIsDisabled = (element:radioInterface)=>{\n    return element.disabled ? \"disabled\" : \"\";\n  }\n\n  ngOnInit(): void {\n    this.radio.forEach((element) => {\n      if (element.checked === true && this.value === \"\") {\n        this.value = element.value;\n      }\n    });\n \n \n  }\n\n}\ninterface radioInterface {\n  value:string,\n  disabled?:boolean,\n  checked?:boolean\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../../styles/index.scss';\r\n.eni-group-radio-text {\r\n  display: flex;\r\n  flex-direction: column;\r\n \r\n}\r\n\r\n.eni-group-radio-text-label {\r\n  display: block;\r\n  color: $eniGrisDarkest;\r\n  @extend %TextSemiBoldNormal;\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.eni-radio-input ~ .eni-group-radio-text-label:after {\r\n  content: \" *\";\r\n  color: $eniRougeNormal;\r\n  @extend %TextSemiBoldNormal;\r\n}\r\n\r\n.eni-group-radio-text-label.disabled {\r\n  color: $eniGrisLighter;\r\n}\r\n\r\n.eni-group-radio-text-label.disabled:after {\r\n  color: $eniGrisLighter;\r\n}\r\n.eni-radio-input {\r\n  width: 0;\r\n  height: 0;\r\n  appearance: none;\r\n  position: absolute;\r\n  border: unset;\r\n  outline: none;\r\n}\r\n\r\n.eni-radio-text {\r\n  background-color: unset;\r\n  appearance: none;\r\n  cursor: pointer;\r\n  border: 2px solid transparent;\r\n  border-radius: 5px;\r\n  display: inline-block;\r\n  position: relative;\r\n  padding: 0.125em;\r\n  padding-left: 1.5em;\r\n  padding-right: 0.5em;\r\n  @extend %TextNormal;\r\n  outline: none;\r\n  width: fit-content;\r\n  &::before,\r\n  &::after {\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 7px;\r\n    transform: translate(-20%, -50%);\r\n    content: \"\";\r\n  }\r\n  &::before {\r\n    width: 18px;\r\n    height: 18px;\r\n    border: 1px solid $eniGrisDarker;\r\n    border-radius: 100%;\r\n\r\n  }\r\n  &[aria-checked=\"true\"]::after {\r\n    display: block;\r\n    background-color: $eniNoir;\r\n    width: 8px;\r\n    height: 8px;\r\n    border-radius: 100%;\r\n    transform: translate(20%, -50%);\r\n  }\r\n\r\n  &[aria-checked=\"true\"]::before {\r\n    border: 2px solid $eniJauneLight;\r\n  }\r\n\r\n  &:hover::before,\r\n  &:focus::before {\r\n    border: 2px solid $eniJauneLight;\r\n  }\r\n \r\n  &.disabled{\r\n    color: $eniGrisLighter;\r\n    cursor: unset;\r\n    &:before{\r\n      background-color: $eniGrisClairLighter;\r\n      border: 1px solid $eniGrisLighter;\r\n    }\r\n    &[aria-checked=\"true\"]::before {\r\n      border: 2px solid $eniJauneLight;\r\n    }\r\n  }\r\n  span{\r\n    margin-left: $MargeXSmall;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./eni-radio-text.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 9
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<fieldset\n  class=\"eni-group-radio-text\"\n  role=\"radiogroup\"\n  [attr.aria-labelledby]=\"name\"\n>\n  <input\n    [name]=\"name\"\n    type=\"text\"\n    class=\"eni-radio-input\"\n    [required]=\"required\"\n    minLength=\"1\"\n    [(ngModel)]=\"value\"\n  />\n  <legend [id]=\"name\" class=\"eni-group-radio-text-label\">\n    {{ title }}\n  </legend>\n\n  <button\n    *ngFor=\"let element of radio; let index = index\"\n    role=\"radio\"\n    [disabled]=\"element.disabled\"\n    [class]=\"\n      'eni-radio-text ' +\n      valueIsDisabled(element) +\n      ' ' +\n      valueIsCheck(element)\n    \"\n    [attr.aria-checked]=\"element.value === value ? true : false\"\n    (click)=\"valueSetter(element)\"\n  >\n    <span>{{ element.value }}</span>\n  </button>\n</fieldset>\n"
         },
         {
             "name": "EniSelectcheckboxComponent",
@@ -1991,7 +2151,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.EniSelectWithUl {\r\n  .eni-select-input {\r\n    visibility: hidden;\r\n    position: absolute;\r\n\r\n    &:invalid {\r\n      color: $eniRougeNormal;\r\n\r\n      & ~ .eni-select .eni-select-box {\r\n        border-color: $eniRougeNormal;\r\n        color: $eniRougeNormal;\r\n        & svg path {\r\n          fill: $eniRougeNormal;\r\n        }\r\n      }\r\n    }\r\n    & ~ .error-message {\r\n      display: none;\r\n    }\r\n    &:focus:invalid ~ .error-message {\r\n      display: block;\r\n      color: $eniRougeNormal;\r\n      @extend %TextNormal;\r\n    }\r\n    &:invalid ~ .error-message {\r\n      display: block;\r\n      color: $eniRougeNormal;\r\n      @extend %TextNormal;\r\n    }\r\n\r\n    &:required {\r\n      & ~ .eni-input-label:after {\r\n        content: \" *\";\r\n        color: $eniRougeNormal;\r\n        @extend %TextSemiBoldNormal;\r\n      }\r\n    }\r\n    &:not(:disabled) ~ .eni-select .eni-select-box:hover {\r\n      cursor: pointer;\r\n      border-color: $eniJauneNormal;\r\n      color: $eniGrisNormal;\r\n    }\r\n    &:disabled {\r\n      & ~ .eni-select .eni-select-box {\r\n        border: solid 2px $eniGrisNormal !important;\r\n        background-color: $eniGrisLightest !important;\r\n      }\r\n      & ~ .eni-input-label {\r\n        color: $eniGrisLighter;\r\n      }\r\n    }\r\n  }\r\n\r\n  .eni-select {\r\n    width: 284px;\r\n    height: 48px;\r\n    position: relative;\r\n\r\n    .eni-select-box {\r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      appearance: none;\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: white;\r\n      display: flex;\r\n      align-items: center;\r\n      text-align: unset;\r\n      padding: 12px;\r\n      border-radius: 4px;\r\n      border: solid 1px $eniGrisDarker;\r\n\r\n      span {\r\n        width: 80%;\r\n        overflow: hidden;\r\n        @extend %TextNormal;\r\n      }\r\n\r\n      svg {\r\n        position: absolute;\r\n        right: 12px;\r\n      }\r\n      &.eni-select-box-open {\r\n        cursor: pointer;\r\n        border-color: $eniJauneNormal;\r\n        svg {\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n    .eni-select-options-container {\r\n      position: absolute;\r\n      bottom: 0;\r\n      left: 0;\r\n      width: 100%;\r\n      max-height: 224px;\r\n\r\n      .eni-select-options {\r\n        &.eni-select-close {\r\n          visibility: hidden;\r\n        }\r\n        background-color: rgb(255, 255, 255);\r\n        color: rgba(0, 0, 0, 0.87);\r\n        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;\r\n        border-radius: 0px 0px 4px 4px;\r\n        box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px,\r\n          rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;\r\n        position: absolute;\r\n        width: 100%;\r\n        display: block;\r\n        overflow: auto;\r\n        max-height: 224px;\r\n\r\n        li {\r\n          &:hover {\r\n            background-color: $eniGrisClair;\r\n          }\r\n          &:focus {\r\n            border: 2px solid $eniBleuNormal;\r\n          }\r\n          cursor: pointer;\r\n          display: flex;\r\n          justify-content: flex-start;\r\n          align-items: center;\r\n          min-height: 56px;\r\n          width: 100%;\r\n          overflow-wrap: anywhere;\r\n          span {\r\n            margin-left: 8px;\r\n            @extend %TextNormal;\r\n          }\r\n          &:not(.selected) svg {\r\n            visibility: hidden;\r\n          }\r\n          &.selected svg {\r\n            position: absolute;\r\n            right: 8px;\r\n          }\r\n          &.disabled {\r\n            color: $eniGrisLighter;\r\n            cursor: unset;\r\n          }\r\n          &.disabled:hover {\r\n            background-color: unset;\r\n          }\r\n          & .checkbox {\r\n            appearance: none;\r\n            background-color: unset;\r\n            position: relative;\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n            margin-left: 8px;\r\n            width: 23px;\r\n            height: 23px;\r\n            border: 2px solid $eniJauneNormal;\r\n          }\r\n          &:not(.selected) .checkbox svg {\r\n            visibility: hidden;\r\n          }\r\n          &.selected .checkbox svg {\r\n            right: unset;\r\n \r\n            path {\r\n              fill: $eniGrisDarker;\r\n            }\r\n          }\r\n\r\n          &.disabled .checkbox {\r\n            border: solid 2px $eniGrisLight;\r\n            background-color: $eniGrisLightest;\r\n          }\r\n        }\r\n\r\n        &.eni-select-categ {\r\n          .eni-categ {\r\n            color: $eniGrisLighter;\r\n            cursor: unset;\r\n\r\n            &:hover {\r\n              background-color: unset;\r\n            }\r\n          }\r\n          li:not(.eni-categ) span {\r\n            margin-left: 24px;\r\n          }\r\n          li .checkbox ~ span {\r\n            margin-left: 8px;\r\n          }\r\n          li:not(.eni-categ) .checkbox {\r\n            margin-left: 24px;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n.eni-select-window-open {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  pointer-events: all;\r\n  & ~ .EniSelectWithUl {\r\n    .eni-select .eni-select-box {\r\n      border-color: $eniJauneNormal !important;\r\n      color: $eniGrisDarker !important;\r\n      & svg path {\r\n        fill: $eniGrisDarker !important;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import '../../styles/index.scss';\r\n.EniSelectWithUl {\r\n  .eni-select-input {\r\n    visibility: hidden;\r\n    position: absolute;\r\n\r\n    &:invalid {\r\n      color: $eniRougeNormal;\r\n\r\n      & ~ .eni-select .eni-select-box {\r\n        border-color: $eniRougeNormal;\r\n        color: $eniRougeNormal;\r\n        & svg path {\r\n          fill: $eniRougeNormal;\r\n        }\r\n      }\r\n    }\r\n    & ~ .error-message {\r\n      display: none;\r\n    }\r\n    &:focus:invalid ~ .error-message {\r\n      display: block;\r\n      color: $eniRougeNormal;\r\n      @extend %TextNormal;\r\n    }\r\n    &:invalid ~ .error-message {\r\n      display: block;\r\n      color: $eniRougeNormal;\r\n      @extend %TextNormal;\r\n    }\r\n    & ~ .eni-input-label {\r\n      display: block;\r\n      color: $eniGrisDarkest;\r\n      font-family: $OpenSansSemiBold;\r\n      font-size: 16px;\r\n      margin-bottom: 8px;\r\n    }\r\n    &:required {\r\n      & ~ .eni-input-label:after {\r\n        content: \" *\";\r\n        color: $eniRougeNormal;\r\n        @extend %TextSemiBoldNormal;\r\n      }\r\n    }\r\n    &:not(:disabled) ~ .eni-select .eni-select-box:hover {\r\n      cursor: pointer;\r\n      border-color: $eniJauneNormal;\r\n      color: $eniGrisNormal;\r\n    }\r\n    &:disabled {\r\n      & ~ .eni-select .eni-select-box {\r\n          background-color: $eniGrisClairLightest;\r\n          color: $eniGrisDark;\r\n          border: solid 1px $eniGrisNormal;\r\n      }\r\n      & ~ .eni-input-label {\r\n        color: $eniGrisLighter;\r\n      }\r\n    }\r\n  }\r\n\r\n  .eni-select {\r\n    width: 284px;\r\n    height: 48px;\r\n    position: relative;\r\n\r\n    .eni-select-box {\r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      appearance: none;\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: white;\r\n      display: flex;\r\n      align-items: center;\r\n      text-align: unset;\r\n      padding: 12px;\r\n      border-radius: 4px;\r\n      border: solid 1px $eniGrisDarker;\r\n\r\n      span {\r\n        width: 80%;\r\n        overflow: hidden;\r\n        @extend %TextNormal;\r\n      }\r\n\r\n      svg {\r\n        position: absolute;\r\n        right: 12px;\r\n      }\r\n      &.eni-select-box-open {\r\n        cursor: pointer;\r\n        border-color: $eniJauneNormal;\r\n        svg {\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n    .eni-select-options-container {\r\n      position: absolute;\r\n      bottom: 0;\r\n      left: 0;\r\n      width: 100%;\r\n      max-height: 224px;\r\n\r\n      .eni-select-options {\r\n        &.eni-select-close {\r\n          visibility: hidden;\r\n        }\r\n        background-color: rgb(255, 255, 255);\r\n        color: rgba(0, 0, 0, 0.87);\r\n        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;\r\n        border-radius: 0px 0px 4px 4px;\r\n        box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px,\r\n          rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;\r\n        position: absolute;\r\n        width: 100%;\r\n        display: block;\r\n        overflow: auto;\r\n        max-height: 224px;\r\n\r\n        li {\r\n          &:hover {\r\n            background-color: $eniGrisClair;\r\n          }\r\n          &:focus {\r\n            border: 2px solid $eniBleuNormal;\r\n          }\r\n          cursor: pointer;\r\n          display: flex;\r\n          justify-content: flex-start;\r\n          align-items: center;\r\n          min-height: 56px;\r\n          width: 100%;\r\n          overflow-wrap: anywhere;\r\n          span {\r\n            margin-left: 8px;\r\n            @extend %TextNormal;\r\n          }\r\n          &:not(.selected) svg {\r\n            visibility: hidden;\r\n          }\r\n          &.selected svg {\r\n            position: absolute;\r\n            right: 8px;\r\n          }\r\n          &.disabled {\r\n            color: $eniGrisLighter;\r\n            cursor: unset;\r\n          }\r\n          &.disabled:hover {\r\n            background-color: unset;\r\n          }\r\n          & .checkbox {\r\n            appearance: none;\r\n            background-color: unset;\r\n            position: relative;\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n            margin-left: 8px;\r\n            width: 23px;\r\n            height: 23px;\r\n            border: 2px solid $eniJauneNormal;\r\n          }\r\n          &:not(.selected) .checkbox svg {\r\n            visibility: hidden;\r\n          }\r\n          &.selected .checkbox svg {\r\n            right: unset;\r\n \r\n            path {\r\n              fill: $eniGrisDarker;\r\n            }\r\n          }\r\n\r\n          &.disabled .checkbox {\r\n            border: solid 2px $eniGrisLight;\r\n            background-color: $eniGrisLightest;\r\n          }\r\n        }\r\n\r\n        &.eni-select-categ {\r\n          .eni-categ {\r\n            color: $eniGrisLighter;\r\n            cursor: unset;\r\n\r\n            &:hover {\r\n              background-color: unset;\r\n            }\r\n          }\r\n          li:not(.eni-categ) span {\r\n            margin-left: 24px;\r\n          }\r\n          li .checkbox ~ span {\r\n            margin-left: 8px;\r\n          }\r\n          li:not(.eni-categ) .checkbox {\r\n            margin-left: 24px;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n.eni-select-window-open {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  pointer-events: all;\r\n  & ~ .EniSelectWithUl {\r\n    .eni-select .eni-select-box {\r\n      border-color: $eniJauneNormal !important;\r\n      color: $eniGrisDarker !important;\r\n      & svg path {\r\n        fill: $eniGrisDarker !important;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./eni-select.component.scss"
                 }
             ],
@@ -2011,7 +2171,7 @@
         },
         {
             "name": "EniSquarecheckboxComponent",
-            "id": "component-EniSquarecheckboxComponent-497a7b309ebca7b1dd3f5852847bd8ab",
+            "id": "component-EniSquarecheckboxComponent-b188279be10db680dc4810d7d60878f9",
             "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/eni-squarecheckbox.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2020,16 +2180,96 @@
             "providers": [],
             "selector": "lib-eni-squarecheckbox",
             "styleUrls": [
-                "./eni-squarecheckbox.component.css"
+                "./eni-squarecheckbox.component.scss"
             ],
             "styles": [],
             "templateUrl": [
                 "./eni-squarecheckbox.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean"
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "\"test\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string"
+                },
+                {
+                    "name": "required",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "boolean"
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "\"non\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "boolean"
+                }
+            ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "handleChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 40
+                },
+                {
+                    "name": "IsDisabled",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 37
+                },
+                {
+                    "name": "IsSelected",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                }
+            ],
             "methodsClass": [
                 {
                     "name": "ngOnInit",
@@ -2037,7 +2277,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 44,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2049,12 +2289,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarecheckbox',\n  templateUrl: './eni-squarecheckbox.component.html',\n  styleUrls: ['./eni-squarecheckbox.component.css']\n})\nexport class EniSquarecheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarecheckbox',\n  templateUrl: './eni-squarecheckbox.component.html',\n  styleUrls: ['./eni-squarecheckbox.component.scss']\n})\nexport class EniSquarecheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  @Input()\n  icon:string = \"\"\n\n  @Input()\n  disabled:boolean= false\n\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  title:string = \"non\"\n\n  @Input()\n  value:boolean = false\n \n  \n\n\nIsSelected = ()=>{\n  return this.value ? \"selected\" : \"\"\n}\nIsDisabled = ()=>{\n  return this.disabled ? \"disabled\" : \"\";\n}\nhandleChange = () => {\n  if(!this.disabled)\n  this.value = !this.value\n};\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
-                    "styleUrl": "./eni-squarecheckbox.component.css"
+                    "data": "@import '../../styles/index.scss';\r\n.eni-group-square {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: fit-content;\r\n  }\r\n  .eni-square-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .eni-square.disabled{\r\n    opacity: 0.5;\r\n  }\r\n  \r\n  .eni-square-input:required ~ .eni-square-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label{\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-square.disabled {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  .eni-square-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  .eni-square {\r\n    position: relative;\r\n    width: 212px;\r\n    height: 202px;\r\n    text-align: center;\r\n    display: flex;\r\n    margin: 20px;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    button {\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: $eniBlanc;\r\n      border-radius: 4px;\r\n      border: 3px solid $eniGrisClairLight;\r\n  \r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      margin: unset;\r\n      padding: unset;\r\n  \r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      -ms-appearance: none;\r\n      -o-appearance: none;\r\n      appearance: none;\r\n      &:not(.disabled) {\r\n        pointer-events: all;\r\n        cursor: pointer;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .eni-square-radio:not(.disabled):hover button:not(.selected) {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-radio button.selected {\r\n    background-color: white;\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-box:hover button:not(.disabled) {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-box button.selected {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-message {\r\n    color: $eniGrisDarker;\r\n    z-index: 1;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    bottom: 40px;\r\n  }\r\n  \r\n  .eni-square-message label {\r\n    @extend %HeadingXsmall;\r\n    padding-top: 32px;\r\n  }\r\n  \r\n  .eni-square img {\r\n    z-index: 1;\r\n    width: 44px;\r\n    height: 36px;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    top: 64px;\r\n  }\r\n  ",
+                    "styleUrl": "./eni-squarecheckbox.component.scss"
                 }
             ],
             "stylesData": "",
@@ -2069,11 +2309,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>eni-squarecheckbox works!</p>\n"
+            "templateData": "<div\n[class]=\"'eni-square eni-square-box ' + IsDisabled() \"\n>\n<img [src]=\"icon\" alt=\"Icon\" />\n<button\n  role=\"checkbox\"\n  [attr.aria-checked]=\"value\"\n    (click)=\"handleChange()\"\n  [class]=\"IsDisabled() + ' ' + IsSelected()\"\n  [tabIndex]=\"disabled ? '-1':''\"\n></button>\n<div class=\"eni-square-message\">\n  <label [htmlFor]=\"name\">{{title}}</label>\n</div>\n<input\n\n[name]=\"name\"\n[id]=\"name\"\n  class=\"eni-square-input\"\n  type=\"text\"\n  [value]=\"value\"\n  [required]=\"required\"\n\n>\n</div>"
         },
         {
             "name": "EniSquarelistcheckboxComponent",
-            "id": "component-EniSquarelistcheckboxComponent-3fd057f384a8bcadb8cfd7a401c30885",
+            "id": "component-EniSquarelistcheckboxComponent-f8e370e8370240db73e51ce108455a0f",
             "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -2151,7 +2391,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 38
+                    "line": 37
                 },
                 {
                     "name": "IsDisabled",
@@ -2161,7 +2401,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 35
+                    "line": 34
                 },
                 {
                     "name": "IsSelected",
@@ -2171,7 +2411,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 32
+                    "line": 31
                 }
             ],
             "methodsClass": [
@@ -2181,7 +2421,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 47,
+                    "line": 46,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -2193,11 +2433,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarelistcheckbox',\n  templateUrl: './eni-squarelistcheckbox.component.html',\n  styleUrls: ['./eni-squarelistcheckbox.component.scss']\n})\nexport class EniSquarelistcheckboxComponent implements OnInit {\n\n  constructor() { }\n  @Input()\n  legend:string = \"Label\"\n\n  @Input()\n  ListSquare:squareInterface[] = []\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  value:string[] = []\n \n  \n\nconditional = (variable:any,equal:any,vartrue:any,varfalse:any)=>{\n  console.log(variable,equal)\n  return variable === equal ? vartrue : varfalse\n}\nIsSelected = (element:squareInterface)=>{\n  return this.value.includes(element.value) ? \"selected\" : \"\"\n}\nIsDisabled = (element:squareInterface)=>{\n  return element.disabled ? \"disabled\" : \"\";\n}\nhandleChange = (data:string) => {\n  if (this.value.includes(data)) {\n    this.value =  this.value.filter(function (val) {\n        return val !== data;\n      })\n  } else {\n    this.value = [...this.value, data];\n  }\n};\n  ngOnInit(): void {\n  }\n\n}\ninterface squareInterface {\n  value:string,\n  icon:string,\n  disabled:boolean,\n}",
+            "sourceCode": "import { Component, OnInit,Input } from '@angular/core';\n\n@Component({\n  selector: 'lib-eni-squarelistcheckbox',\n  templateUrl: './eni-squarelistcheckbox.component.html',\n  styleUrls: ['./eni-squarelistcheckbox.component.scss']\n})\nexport class EniSquarelistcheckboxComponent implements OnInit {\n\n  constructor() { }\n  @Input()\n  legend:string = \"Label\"\n\n  @Input()\n  ListSquare:squareInterface[] = []\n\n  @Input()\n  required:boolean = false\n\n  @Input()\n  name:string = \"test\"\n\n  @Input()\n  value:string[] = []\n \n  \n\nconditional = (variable:any,equal:any,vartrue:any,varfalse:any)=>{\n  return variable === equal ? vartrue : varfalse\n}\nIsSelected = (element:squareInterface)=>{\n  return this.value.includes(element.value) ? \"selected\" : \"\"\n}\nIsDisabled = (element:squareInterface)=>{\n  return element.disabled ? \"disabled\" : \"\";\n}\nhandleChange = (data:string) => {\n  if (this.value.includes(data)) {\n    this.value =  this.value.filter(function (val) {\n        return val !== data;\n      })\n  } else {\n    this.value = [...this.value, data];\n  }\n};\n  ngOnInit(): void {\n  }\n\n}\ninterface squareInterface {\n  value:string,\n  icon:string,\n  disabled:boolean,\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-group-square {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: fit-content;\r\n  }\r\n  .eni-square-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .eni-square.disabled{\r\n    opacity: 0.5;\r\n  }\r\n  \r\n  .eni-square-input:required ~ .eni-square-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label{\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-square.disabled {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  .eni-square-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  .eni-square {\r\n    position: relative;\r\n    width: 212px;\r\n    height: 202px;\r\n    text-align: center;\r\n    display: flex;\r\n    margin: 20px;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    button {\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: $eniBlanc;\r\n      border-radius: 4px;\r\n      border: 3px solid $eniGrisClairLight;\r\n  \r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      margin: unset;\r\n      padding: unset;\r\n  \r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      -ms-appearance: none;\r\n      -o-appearance: none;\r\n      appearance: none;\r\n      &:not(.disabled) {\r\n        pointer-events: all;\r\n        cursor: pointer;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .eni-square-radio:not(.disabled):hover button:not(.selected) {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-radio button.selected {\r\n    background-color: white;\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-box:hover button:not(.disabled) {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-box button.selected {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-message {\r\n    color: $eniGrisDarker;\r\n    z-index: 1;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    bottom: 40px;\r\n  }\r\n  \r\n  .eni-square-message label {\r\n    @extend %HeadingXsmall;\r\n    padding-top: 32px;\r\n  }\r\n  \r\n  .eni-square img {\r\n    z-index: 1;\r\n    width: 44px;\r\n    height: 36px;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    top: 64px;\r\n  }\r\n  ",
+                    "data": "@import '../../styles/index.scss';\r\n.eni-group-square {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: fit-content;\r\n  }\r\n  .eni-square-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .eni-square.disabled{\r\n    opacity: 0.5;\r\n    pointer-events: none;\r\n    cursor: none;\r\n  }\r\n  \r\n  .eni-square-input:required ~ .eni-square-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label{\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-square.disabled {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  .eni-square-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  .eni-square {\r\n    position: relative;\r\n    width: 212px;\r\n    height: 202px;\r\n    text-align: center;\r\n    display: flex;\r\n    margin: 20px;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    button {\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: $eniBlanc;\r\n      border-radius: 4px;\r\n      border: 3px solid $eniGrisClairLight;\r\n  \r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      margin: unset;\r\n      padding: unset;\r\n  \r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      -ms-appearance: none;\r\n      -o-appearance: none;\r\n      appearance: none;\r\n      &:not(.disabled) {\r\n        pointer-events: all;\r\n        cursor: pointer;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .eni-square-radio:not(.disabled):hover button:not(.selected) {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-radio button.selected {\r\n    background-color: white;\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-box:hover button:not(.disabled) {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-box button.selected {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-message {\r\n    color: $eniGrisDarker;\r\n    z-index: 1;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    bottom: 40px;\r\n  }\r\n  \r\n  .eni-square-message label {\r\n    @extend %HeadingXsmall;\r\n    padding-top: 32px;\r\n  }\r\n  \r\n  .eni-square img {\r\n    z-index: 1;\r\n    width: 44px;\r\n    height: 36px;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    top: 64px;\r\n  }\r\n  ",
                     "styleUrl": "./eni-squarelistcheckbox.component.scss"
                 }
             ],
@@ -2213,7 +2453,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"element.value === value\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.title}}</label>\n      </div>\n    </div>\n\n</fieldset>"
+            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"element.value === value\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.value}}</label>\n      </div>\n    </div>\n\n</fieldset>"
         },
         {
             "name": "EniSquarelistradioComponent",
@@ -2341,7 +2581,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-group-square {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: fit-content;\r\n  }\r\n  .eni-square-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .eni-square.disabled{\r\n    opacity: 0.5;\r\n  }\r\n  \r\n  .eni-square-input:required ~ .eni-square-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label{\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-square.disabled {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  .eni-square-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  .eni-square {\r\n    position: relative;\r\n    width: 212px;\r\n    height: 202px;\r\n    text-align: center;\r\n    display: flex;\r\n    margin: 20px;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    button {\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: $eniBlanc;\r\n      border-radius: 4px;\r\n      border: 3px solid $eniGrisClairLight;\r\n  \r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      margin: unset;\r\n      padding: unset;\r\n  \r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      -ms-appearance: none;\r\n      -o-appearance: none;\r\n      appearance: none;\r\n      &:not(.disabled) {\r\n        pointer-events: all;\r\n        cursor: pointer;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .eni-square-radio:not(.disabled):hover button:not(.selected) {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-radio button.selected {\r\n    background-color: white;\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-box:hover button:not(.disabled) {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-box button.selected {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-message {\r\n    color: $eniGrisDarker;\r\n    z-index: 1;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    bottom: 40px;\r\n  }\r\n  \r\n  .eni-square-message label {\r\n    @extend %HeadingXsmall;\r\n    padding-top: 32px;\r\n  }\r\n  \r\n  .eni-square img {\r\n    z-index: 1;\r\n    width: 44px;\r\n    height: 36px;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    top: 64px;\r\n  }\r\n  ",
+                    "data": "@import '../../styles/index.scss';\r\n.eni-group-square {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: fit-content;\r\n  }\r\n  .eni-square-label {\r\n    display: block;\r\n    color: $eniGrisDarkest;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n    margin-left: 20px;\r\n  }\r\n  \r\n  .eni-square.disabled{\r\n    opacity: 0.5;\r\n    pointer-events: none;\r\n    cursor: none;\r\n  }\r\n\r\n  \r\n  .eni-square-input:required ~ .eni-square-label:after {\r\n    content: \" *\";\r\n    color: $eniRougeNormal;\r\n    font-family: $OpenSansSemiBold;\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label{\r\n    color: $eniGrisLighter;\r\n  }\r\n  \r\n  .eni-square-input:disabled ~ .eni-square-label:after {\r\n    color: $eniGrisLighter;\r\n  }\r\n  .eni-square.disabled {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  .eni-square-input {\r\n    width: 0;\r\n    height: 0;\r\n    appearance: none;\r\n    position: absolute;\r\n    border: unset;\r\n    outline: none;\r\n  }\r\n  .eni-square {\r\n    position: relative;\r\n    width: 212px;\r\n    height: 202px;\r\n    text-align: center;\r\n    display: flex;\r\n    margin: 20px;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    button {\r\n      width: 100%;\r\n      height: 100%;\r\n      background-color: $eniBlanc;\r\n      border-radius: 4px;\r\n      border: 3px solid $eniGrisClairLight;\r\n  \r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      margin: unset;\r\n      padding: unset;\r\n  \r\n      -webkit-appearance: none;\r\n      -moz-appearance: none;\r\n      -ms-appearance: none;\r\n      -o-appearance: none;\r\n      appearance: none;\r\n      &:not(.disabled) {\r\n        pointer-events: all;\r\n        cursor: pointer;\r\n      }\r\n    }\r\n  }\r\n  \r\n  .eni-square-radio:not(.disabled):hover button:not(.selected) {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-radio button.selected {\r\n    background-color: white;\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-box:hover button:not(.disabled) {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n  .eni-square-box button.selected {\r\n    border: 3px solid $eniBlanc;\r\n    border-bottom: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-square-message {\r\n    color: $eniGrisDarker;\r\n    z-index: 1;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    bottom: 40px;\r\n  }\r\n  \r\n  .eni-square-message label {\r\n    @extend %HeadingXsmall;\r\n    padding-top: 32px;\r\n  }\r\n  \r\n  .eni-square img {\r\n    z-index: 1;\r\n    width: 44px;\r\n    height: 36px;\r\n    pointer-events: none;\r\n    position: absolute;\r\n    top: 64px;\r\n  }\r\n  ",
                     "styleUrl": "./eni-squarelistradio.component.scss"
                 }
             ],
@@ -2357,7 +2597,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"element.value === value\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.title}}</label>\n      </div>\n    </div>\n\n</fieldset>"
+            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"element.value === value\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.value}}</label>\n      </div>\n    </div>\n\n</fieldset>"
         },
         {
             "name": "EniStatusComponent",
@@ -2783,7 +3023,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/index.scss';\r\n.eni-tabs-group {\r\n    display: flex;\r\n    margin-bottom: 50px;\r\n    flex-wrap: wrap;\r\n  }\r\n  \r\n  .eni-tabs:disabled {\r\n    opacity: 0.5;\r\n  }\r\n  \r\n  .eni-tabs-group.disabled .eni-tabs {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  \r\n  .eni-tabs {\r\n    cursor: pointer;\r\n    background-color: $eniBlanc;\r\n    border-radius: 4px;\r\n    border: 3px solid $eniGrisClairLight;\r\n    justify-content: center;\r\n    align-items: center;\r\n    display: flex;\r\n    margin-right: 24px;\r\n    padding: 16px 24px;\r\n    margin-top: 24px;\r\n\r\n  }\r\n  \r\n  button.eni-tabs:not(:disabled):hover,button.eni-tabs:focus,button.eni-tabs:focus-visible {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n    \r\n  .eni-tabs.selected {\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-tabs-message {\r\n    height: 100%;\r\n    float: left;\r\n    clear: none;\r\n    display: table;\r\n  }\r\n  \r\n  .eni-tabs-message span {\r\n    font-family: \"EniExpBold\";\r\n    font-size: 20px;\r\n    color: $eniGrisDarker;\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n  }\r\n  \r\n  .eni-tabs-img {\r\n    height: 100%;\r\n    float: left;\r\n    clear: none;\r\n  }\r\n  \r\n  .eni-tabs img {\r\n    width: 48px;\r\n    height: 48px;\r\n    margin-right: 8px;\r\n  }\r\n  \r\n  img[src=\"\"] {\r\n    display: none;\r\n  }\r\n  \r\n  .eni-tabs-info-group {\r\n    padding: 10px;\r\n  }\r\n  \r\n  .eni-tabs-info {\r\n    display: none;\r\n    font-family: $OpenSansRegular;\r\n  }\r\n  .eni-tabs-info.display {\r\n    display: block;\r\n  }\r\n  ",
+                    "data": "@import '../../styles/index.scss';\r\n.eni-tabs-group {\r\n    display: flex;\r\n    margin-bottom: 50px;\r\n    flex-wrap: wrap;\r\n  }\r\n  \r\n  .eni-tabs:disabled {\r\n    opacity: 0.5;\r\n    pointer-events: none;\r\n    cursor: none;\r\n  }\r\n  \r\n  .eni-tabs-group.disabled .eni-tabs {\r\n    border: 3px solid $eniGrisClairLight;\r\n  }\r\n  \r\n  .eni-tabs {\r\n    cursor: pointer;\r\n    background-color: $eniBlanc;\r\n    border-radius: 4px;\r\n    border: 3px solid $eniGrisClairLight;\r\n    justify-content: center;\r\n    align-items: center;\r\n    display: flex;\r\n    margin-right: 24px;\r\n    padding: 16px 24px;\r\n    margin-top: 24px;\r\n\r\n  }\r\n  \r\n  button.eni-tabs:not(:disabled):hover,button.eni-tabs:focus,button.eni-tabs:focus-visible {\r\n    border: 3px solid $eniJauneLightest;\r\n  }\r\n  \r\n    \r\n  .eni-tabs.selected {\r\n    border: 3px solid $eniJauneNormal;\r\n    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));\r\n  }\r\n  \r\n  .eni-tabs-message {\r\n    height: 100%;\r\n    float: left;\r\n    clear: none;\r\n    display: table;\r\n  }\r\n  \r\n  .eni-tabs-message span {\r\n    font-family: \"EniExpBold\";\r\n    font-size: 20px;\r\n    color: $eniGrisDarker;\r\n    display: table-cell;\r\n    vertical-align: middle;\r\n  }\r\n  \r\n  .eni-tabs-img {\r\n    height: 100%;\r\n    float: left;\r\n    clear: none;\r\n  }\r\n  \r\n  .eni-tabs img {\r\n    width: 48px;\r\n    height: 48px;\r\n    margin-right: 8px;\r\n  }\r\n  \r\n  img[src=\"\"] {\r\n    display: none;\r\n  }\r\n  \r\n  .eni-tabs-info-group {\r\n    padding: 10px;\r\n  }\r\n  \r\n  .eni-tabs-info {\r\n    display: none;\r\n    font-family: $OpenSansRegular;\r\n  }\r\n  .eni-tabs-info.display {\r\n    display: block;\r\n  }\r\n  ",
                     "styleUrl": "./eni-tabs.component.scss"
                 }
             ],
@@ -3103,13 +3343,13 @@
     "modules": [
         {
             "name": "EnidesignsystemAngularModule",
-            "id": "module-EnidesignsystemAngularModule-4ec73cca4c142908f43a3cbabca165cf",
+            "id": "module-EnidesignsystemAngularModule-995f49779273f0139c627e089b2ba8e3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/enidesignsystem-angular/src/lib/enidesignsystem-angular.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { EnidesignsystemAngularComponent } from './enidesignsystem-angular.component';\nimport { EniCheckboxComponent } from './Checkbox/eni-checkbox/eni-checkbox.component';\nimport { EniListcheckboxComponent } from './Checkbox/eni-listcheckbox/eni-listcheckbox.component';\nimport { EniInputComponent } from './Input/eni-input/eni-input.component';\nimport { EniModaleComponent } from './Modale/eni-modale/eni-modale.component';\nimport { EniRadioComponent } from './Radio/eni-radio/eni-radio.component';\nimport { EniSelectComponent } from './Select/eni-select/eni-select.component';\nimport { EniSelectcheckboxComponent } from './Select/eni-selectcheckbox/eni-selectcheckbox.component';\nimport { EniSquarecheckboxComponent } from './Square/eni-squarecheckbox/eni-squarecheckbox.component';\nimport { EniSquarelistcheckboxComponent } from './Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component';\nimport { EniSquarelistradioComponent } from './Square/eni-squarelistradio/eni-squarelistradio.component';\nimport { EniStatusComponent } from './Status/eni-status/eni-status.component';\nimport { EniSwitchComponent } from './Switch/eni-switch/eni-switch.component';\nimport { EniTabsComponent } from './Tabs/eni-tabs/eni-tabs.component';\nimport { EniTextareaComponent } from './TextArea/eni-textarea/eni-textarea.component';\nimport { EniTooltipComponent } from './Tooltip/eni-tooltip/eni-tooltip.component';\nimport { EniAlertComponent } from './Alert/eni-alert/eni-alert.component';\nimport { EniStylesComponent } from './eni-styles/eni-styles.component';\nimport { EniButtonComponent } from './Button/eni-button/eni-button.component';\nimport { FormsModule } from '@angular/forms';\n\n\n\n@NgModule({\n  declarations: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent,\n\n    \n  ],\n  imports: [ FormsModule],\n  exports: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent,\n  ]\n})\nexport class EnidesignsystemAngularModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { EnidesignsystemAngularComponent } from './enidesignsystem-angular.component';\nimport { EniCheckboxComponent } from './Checkbox/eni-checkbox/eni-checkbox.component';\nimport { EniListcheckboxComponent } from './Checkbox/eni-listcheckbox/eni-listcheckbox.component';\nimport { EniInputComponent } from './Input/eni-input/eni-input.component';\nimport { EniModaleComponent } from './Modale/eni-modale/eni-modale.component';\nimport { EniRadioTextComponent } from './Radio/eni-radio-text/eni-radio-text.component';\nimport { EniRadioButtonComponent } from './Radio/eni-radio-button/eni-radio-button.component';\nimport { EniSelectComponent } from './Select/eni-select/eni-select.component';\nimport { EniSelectcheckboxComponent } from './Select/eni-selectcheckbox/eni-selectcheckbox.component';\nimport { EniSquarecheckboxComponent } from './Square/eni-squarecheckbox/eni-squarecheckbox.component';\nimport { EniSquarelistcheckboxComponent } from './Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component';\nimport { EniSquarelistradioComponent } from './Square/eni-squarelistradio/eni-squarelistradio.component';\nimport { EniStatusComponent } from './Status/eni-status/eni-status.component';\nimport { EniSwitchComponent } from './Switch/eni-switch/eni-switch.component';\nimport { EniTabsComponent } from './Tabs/eni-tabs/eni-tabs.component';\nimport { EniTextareaComponent } from './TextArea/eni-textarea/eni-textarea.component';\nimport { EniTooltipComponent } from './Tooltip/eni-tooltip/eni-tooltip.component';\nimport { EniAlertComponent } from './Alert/eni-alert/eni-alert.component';\nimport { EniStylesComponent } from './eni-styles/eni-styles.component';\nimport { EniButtonComponent } from './Button/eni-button/eni-button.component';\nimport { FormsModule } from '@angular/forms';\n\n\n\n@NgModule({\n  declarations: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent,\n\n    \n  ],\n  imports: [ FormsModule],\n  exports: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent,\n  ]\n})\nexport class EnidesignsystemAngularModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -3137,7 +3377,10 @@
                             "name": "EniModaleComponent"
                         },
                         {
-                            "name": "EniRadioComponent"
+                            "name": "EniRadioButtonComponent"
+                        },
+                        {
+                            "name": "EniRadioTextComponent"
                         },
                         {
                             "name": "EniSelectComponent"
@@ -3203,7 +3446,10 @@
                             "name": "EniModaleComponent"
                         },
                         {
-                            "name": "EniRadioComponent"
+                            "name": "EniRadioButtonComponent"
+                        },
+                        {
+                            "name": "EniRadioTextComponent"
                         },
                         {
                             "name": "EniSelectComponent"
@@ -3370,6 +3616,26 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Select/eni-select/Eni-Select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3380,7 +3646,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3471,6 +3737,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Select/eni-select/Eni-Select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3879,6 +4155,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Modale/eni-modale/Eni-Modale.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniModaleComponent>",
+                "defaultValue": "(args: EniModaleComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3889,11 +4175,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Modale/eni-modale/Eni-Modale.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<EniModaleComponent>",
-                "defaultValue": "(args: EniModaleComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<EniRadioButtonComponent>",
+                "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniRadioTextComponent>",
+                "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3909,11 +4205,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<EniRadioComponent>",
-                "defaultValue": "(args: EniRadioComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<EniSquarecheckboxComponent>",
+                "defaultValue": "(args: EniSquarecheckboxComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -3979,21 +4275,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Tooltip/eni-tooltip/Eni-Tooltip.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniTooltipComponent>",
-                "defaultValue": "(args: EniTooltipComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/TextArea/eni-textarea/Eni-Textarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<EniTextareaComponent>",
                 "defaultValue": "(args: EniTextareaComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Tooltip/eni-tooltip/Eni-Tooltip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniTooltipComponent>",
+                "defaultValue": "(args: EniTooltipComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "TertiaryArrow",
@@ -4427,12 +4723,12 @@
                     "defaultValue": "(args: EniInputComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts": [
+            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -4442,11 +4738,65 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<EniRadioComponent>",
-                    "defaultValue": "(args: EniRadioComponent) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<EniRadioButtonComponent>",
+                    "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<EniRadioTextComponent>",
+                    "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<EniSquarecheckboxComponent>",
+                    "defaultValue": "(args: EniSquarecheckboxComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistcheckbox/Eni-squarelistcheckbox.stories.ts": [
@@ -5208,7 +5558,7 @@
                 "linktype": "component",
                 "name": "EniCheckboxComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/12",
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -5368,7 +5718,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -5378,7 +5728,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/Eni-Radio.stories.ts",
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -5388,16 +5738,54 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/eni-radio.component.ts",
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/eni-radio-button.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "EniRadioComponent",
+                "name": "EniRadioButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/11",
                 "status": "low"
             },
             {
-                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio/eni-radio.component.ts",
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/eni-radio-button.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "radioInterface",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/eni-radio-text.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EniRadioTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/eni-radio-text.component.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "radioInterface",
@@ -5522,12 +5910,42 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Disabled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/eni-squarecheckbox.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "EniSquarecheckboxComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {

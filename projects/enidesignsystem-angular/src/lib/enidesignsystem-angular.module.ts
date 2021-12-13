@@ -4,7 +4,8 @@ import { EniCheckboxComponent } from './Checkbox/eni-checkbox/eni-checkbox.compo
 import { EniListcheckboxComponent } from './Checkbox/eni-listcheckbox/eni-listcheckbox.component';
 import { EniInputComponent } from './Input/eni-input/eni-input.component';
 import { EniModaleComponent } from './Modale/eni-modale/eni-modale.component';
-import { EniRadioComponent } from './Radio/eni-radio/eni-radio.component';
+import { EniRadioTextComponent } from './Radio/eni-radio-text/eni-radio-text.component';
+import { EniRadioButtonComponent } from './Radio/eni-radio-button/eni-radio-button.component';
 import { EniSelectComponent } from './Select/eni-select/eni-select.component';
 import { EniSelectcheckboxComponent } from './Select/eni-selectcheckbox/eni-selectcheckbox.component';
 import { EniSquarecheckboxComponent } from './Square/eni-squarecheckbox/eni-squarecheckbox.component';
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     EniListcheckboxComponent,
     EniInputComponent,
     EniModaleComponent,
-    EniRadioComponent,
+    EniRadioTextComponent,
+    EniRadioButtonComponent,
     EniSelectComponent,
     EniSelectcheckboxComponent,
     EniSquarecheckboxComponent,
@@ -53,7 +55,8 @@ import { FormsModule } from '@angular/forms';
     EniListcheckboxComponent,
     EniInputComponent,
     EniModaleComponent,
-    EniRadioComponent,
+    EniRadioTextComponent,
+    EniRadioButtonComponent,
     EniSelectComponent,
     EniSelectcheckboxComponent,
     EniSquarecheckboxComponent,

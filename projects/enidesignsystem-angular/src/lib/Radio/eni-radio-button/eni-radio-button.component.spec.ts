@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EniRadioComponent } from './eni-radio.component';
+import { EniRadioButtonComponent } from './eni-radio-button.component';
 
-describe('EniRadioComponent', () => {
-  let component: EniRadioComponent;
-  let fixture: ComponentFixture<EniRadioComponent>;
+describe('EniRadioButtonComponent', () => {
+  let component: EniRadioButtonComponent;
+  let fixture: ComponentFixture<EniRadioButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniRadioComponent ]
+      declarations: [ EniRadioButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EniRadioComponent);
+    fixture = TestBed.createComponent(EniRadioButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

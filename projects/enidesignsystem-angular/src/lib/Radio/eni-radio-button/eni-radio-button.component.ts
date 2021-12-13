@@ -2,11 +2,11 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
 
-  selector: 'lib-eni-radio',
-  templateUrl: './eni-radio.component.html',
-  styleUrls: ['./eni-radio.component.scss']
+  selector: 'lib-eni-radio-button',
+  templateUrl: './eni-radio-button.component.html',
+  styleUrls: ['./eni-radio-button.component.scss']
 })
-export class EniRadioComponent implements OnInit {
+export class EniRadioButtonComponent implements OnInit {
 
   constructor() { }
 
@@ -33,17 +33,17 @@ export class EniRadioComponent implements OnInit {
     }
   }
    valueIsCheck = (element:radioInterface)=>{
-    return this.value===element.value ? "checked" : "";
+    return this.value===element.value ? "checked " : "";
   }
    valueIsDisabled = (element:radioInterface)=>{
     return element.disabled ? "disabled" : "";
   }
 
   ngOnInit(): void {
-    let x = "";
+  
     this.radio.forEach((element) => {
       if (element.checked === true && this.value === "") {
-        this.value = x;
+        this.value = element.value;
       }
     });
  

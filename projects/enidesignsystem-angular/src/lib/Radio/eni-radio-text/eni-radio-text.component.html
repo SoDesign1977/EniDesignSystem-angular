@@ -1,0 +1,33 @@
+<fieldset
+  class="eni-group-radio-text"
+  role="radiogroup"
+  [attr.aria-labelledby]="name"
+>
+  <input
+    [name]="name"
+    type="text"
+    class="eni-radio-input"
+    [required]="required"
+    minLength="1"
+    [(ngModel)]="value"
+  />
+  <legend [id]="name" class="eni-group-radio-text-label">
+    {{ title }}
+  </legend>
+
+  <button
+    *ngFor="let element of radio; let index = index"
+    role="radio"
+    [disabled]="element.disabled"
+    [class]="
+      'eni-radio-text ' +
+      valueIsDisabled(element) +
+      ' ' +
+      valueIsCheck(element)
+    "
+    [attr.aria-checked]="element.value === value ? true : false"
+    (click)="valueSetter(element)"
+  >
+    <span>{{ element.value }}</span>
+  </button>
+</fieldset>

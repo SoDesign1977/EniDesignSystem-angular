@@ -28,7 +28,7 @@ role="radiogroup"
       [attr.aria-checked]="element.value === value ? true : false"
       (click)="valueSetter(element)"
     >
-      {{element.value}}
+      <span>{{element.value}}</span>
     </button>
 
 </fieldset>

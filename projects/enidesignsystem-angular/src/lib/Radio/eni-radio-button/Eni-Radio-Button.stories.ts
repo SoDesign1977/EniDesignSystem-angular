@@ -2,16 +2,16 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 
 import { CommonModule } from '@angular/common';
 
-import { EniRadioComponent } from './eni-radio.component';
+import { EniRadioButtonComponent } from './eni-radio-button.component';
 
 import { FormsModule } from '@angular/forms';
 
 
 export default {
-  component: EniRadioComponent,
+  component: EniRadioButtonComponent,
   decorators: [
     moduleMetadata({
-      declarations: [EniRadioComponent],
+      declarations: [EniRadioButtonComponent],
       imports: [CommonModule,FormsModule],
     }),
   ],
@@ -19,7 +19,7 @@ export default {
   title: "Components/Radio/EniRadioButton",
 } as Meta;
 
-const Template: Story<EniRadioComponent> = (args: EniRadioComponent) => ({
+const Template: Story<EniRadioButtonComponent> = (args: EniRadioButtonComponent) => ({
   props: args,
 });
 
@@ -35,8 +35,8 @@ Default.args = {
     },
     {
       value:"Test2",
-      disabled:false,
-      checked:false,
+      disabled:true,
+      checked:true,
     },
     {
       value:"Test3",
