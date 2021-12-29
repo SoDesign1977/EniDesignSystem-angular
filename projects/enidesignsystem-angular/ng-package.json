@@ -2,7 +2,29 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/enidesignsystem-angular",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "./src/lib/styles/index.scss",
+      "./src/lib/Alert/eni-alert/eni-alert.component.scss",
+      "./src/lib/Breadcrumb/eni-breadcrumb/eni-breadcrumb.component",
+      "./src/lib/Button/eni-button/eni-button.component.component.scss",
+      "./src/lib/Checkbox/eni-checkbox/eni-checkbox.component.scss",
+      "./src/lib/Checkbox/eni-listcheckbox/eni-listcheckbox.component.scss",
+      "./src/lib/Input/eni-input/eni-input.component.scss",
+      "./src/lib/Modale/eni-modale/eni-modale.component.scss",
+      "./src/lib/Radio/eni-radio-button/eni-radio-button.component.scss",
+      "./src/lib/Radio/eni-radio-text/eni-radio-text.component.scss",
+      "./src/lib/Select/eni-alert/eni-select.component.scss",
+      "./src/lib/Select/eni-selectcheckbox/eni-selectcheckbox.component.scss",
+      "./src/lib/Square/eni-squarecheckbox/eni-squarecheckbox.component.scss",
+      "./src/lib/Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component.scss",
+      "./src/lib/Square/eni-squarelistradio/eni-squarelistradio.component.scss",
+      "./src/lib/Status/eni-status/eni-status.component.scss",
+      "./src/lib/Switch/eni-switch/eni-switch.component.scss",
+      "./src/lib/Tabs/eni-tabs/eni-tabs.component.scss",
+      "./src/lib/TextArea/eni-textarea/eni-textarea.component.scss",
+      "./src/lib/Tooltip/eni-tooltip/eni-tooltip.component.scss"
+    ]
   },
 
   "assets": ["./styles/index.scss"]

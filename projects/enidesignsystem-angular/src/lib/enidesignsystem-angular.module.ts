@@ -44,9 +44,7 @@ import { FormsModule } from '@angular/forms';
     EniTooltipComponent,
     EniAlertComponent,
     EniStylesComponent,
-    EniButtonComponent,
-
-    
+    EniButtonComponent
   ],
   imports: [ FormsModule],
   exports: [
@@ -69,7 +67,7 @@ import { FormsModule } from '@angular/forms';
     EniTooltipComponent,
     EniAlertComponent,
     EniStylesComponent,
-    EniButtonComponent,
+    EniButtonComponent
   ]
 })
 export class EnidesignsystemAngularModule { }

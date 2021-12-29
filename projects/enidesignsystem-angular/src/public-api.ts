@@ -25,7 +25,7 @@ export * from './lib/Switch/eni-switch/eni-switch.component';
 export * from './lib/Tabs/eni-tabs/eni-tabs.component';
 export * from './lib/TextArea/eni-textarea/eni-textarea.component';
 export * from './lib/Tooltip/eni-tooltip/eni-tooltip.component';
-
+export * from './lib/Button/eni-button/eni-button.component';
 
 
 
