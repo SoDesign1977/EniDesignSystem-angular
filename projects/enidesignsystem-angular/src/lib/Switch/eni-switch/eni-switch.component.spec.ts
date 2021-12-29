@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniSwitchComponent } from './eni-switch.component';
 
 describe('EniSwitchComponent', () => {
@@ -8,7 +9,8 @@ describe('EniSwitchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniSwitchComponent ]
+      declarations: [ EniSwitchComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

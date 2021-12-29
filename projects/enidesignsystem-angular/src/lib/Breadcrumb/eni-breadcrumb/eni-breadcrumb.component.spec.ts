@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniBreadcrumbComponent } from './eni-breadcrumb.component';
 
 describe('EniBreadcrumbComponent', () => {
@@ -8,7 +9,8 @@ describe('EniBreadcrumbComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniBreadcrumbComponent ]
+      declarations: [ EniBreadcrumbComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

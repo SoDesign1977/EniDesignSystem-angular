@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniStatusComponent } from './eni-status.component';
 
 describe('EniStatusComponent', () => {
@@ -8,7 +9,8 @@ describe('EniStatusComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniStatusComponent ]
+      declarations: [ EniStatusComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

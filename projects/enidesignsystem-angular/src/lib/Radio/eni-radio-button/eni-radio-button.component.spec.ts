@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniRadioButtonComponent } from './eni-radio-button.component';
 
 describe('EniRadioButtonComponent', () => {
@@ -8,7 +9,8 @@ describe('EniRadioButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniRadioButtonComponent ]
+      declarations: [ EniRadioButtonComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

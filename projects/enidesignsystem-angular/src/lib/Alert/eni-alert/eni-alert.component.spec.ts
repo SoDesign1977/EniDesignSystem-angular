@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniAlertComponent } from './eni-alert.component';
 
 describe('EniAlertComponent', () => {
@@ -8,7 +9,8 @@ describe('EniAlertComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniAlertComponent ]
+      declarations: [ EniAlertComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

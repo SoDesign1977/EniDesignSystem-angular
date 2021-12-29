@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniCheckboxComponent } from './eni-checkbox.component';
 
 describe('EniCheckboxComponent', () => {
@@ -8,7 +9,8 @@ describe('EniCheckboxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniCheckboxComponent ]
+      declarations: [ EniCheckboxComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });

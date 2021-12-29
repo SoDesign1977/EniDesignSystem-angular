@@ -1,10 +1,10 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { EniSelectComponent } from './eni-select.component';
 
-import { FormsModule } from '@angular/forms';
 
 
 export default {

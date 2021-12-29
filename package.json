@@ -11,7 +11,7 @@
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
     "build:scss": "scss-bundle -p scss-bundle.config.json",
-    "build:lib": "npm run build:scss && ng build enidesignsystem-angular --prod"
+    "build:lib": "ng build enidesignsystem-angular --prod"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { EniSquarelistcheckboxComponent } from './eni-squarelistcheckbox.component';
 
 describe('EniSquarelistcheckboxComponent', () => {
@@ -8,7 +9,8 @@ describe('EniSquarelistcheckboxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EniSquarelistcheckboxComponent ]
+      declarations: [ EniSquarelistcheckboxComponent ],
+      imports: [CommonModule,FormsModule],
     })
     .compileComponents();
   });
