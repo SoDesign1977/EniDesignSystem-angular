@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniSquarelistradioComponent } from './eni-squarelistradio.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniSquarelistradioComponent', () => {
   let component: EniSquarelistradioComponent;
@@ -10,7 +11,7 @@ describe('EniSquarelistradioComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniSquarelistradioComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });

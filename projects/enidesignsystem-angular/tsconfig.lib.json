@@ -7,11 +7,24 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
     "types": [],
     "lib": [
       "dom",
       "es2018"
     ]
+  },
+  "angularCompilerOptions": {
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "enableResourceInlining": true,
+    "enableIvy": true
   },
   "exclude": [
     "src/test.ts",

@@ -25,7 +25,7 @@ role="group"
         (click)="handleChange(element.value)"
         [id]="'cond'+index"
         role="checkbox"
-        [attr.aria-checked]="element.value === value"
+        [attr.aria-checked]="value.includes(element.value)"
         [class]="'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)"
         [tabindex]="element.disabled ? '-1' : ''"
       ></button>

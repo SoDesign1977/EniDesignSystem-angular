@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniInputComponent } from './eni-input.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniInputComponent', () => {
   let component: EniInputComponent;
@@ -10,7 +11,7 @@ describe('EniInputComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniInputComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule,CommonModule,FormsModule],
     })
     .compileComponents();
   });

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniAlertComponent } from './eni-alert.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniAlertComponent', () => {
   let component: EniAlertComponent;
@@ -10,7 +11,7 @@ describe('EniAlertComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniAlertComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule,CommonModule,FormsModule],
     })
     .compileComponents();
   });

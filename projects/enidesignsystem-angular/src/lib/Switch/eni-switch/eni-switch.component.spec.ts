@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniSwitchComponent } from './eni-switch.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniSwitchComponent', () => {
   let component: EniSwitchComponent;
@@ -10,7 +11,7 @@ describe('EniSwitchComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniSwitchComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });

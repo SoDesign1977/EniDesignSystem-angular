@@ -13,7 +13,7 @@
           <li
             *ngFor="let element of ListCheckox; let index = index"
             role="checkbox"
-            [attr.aria-checked]="IsChecked(element.value)"
+            [attr.aria-checked]="IsChecked(element)"
             (click)="handleChange(element.value)"
            
             [class]=" IsDisabled(element) + ' ' + IsSelected(element)"

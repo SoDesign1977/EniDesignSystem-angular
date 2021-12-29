@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { EniRadioTextComponent } from './eni-radio-text.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniRadioComponent', () => {
   let component: EniRadioTextComponent;
@@ -11,7 +12,7 @@ describe('EniRadioComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniRadioTextComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });

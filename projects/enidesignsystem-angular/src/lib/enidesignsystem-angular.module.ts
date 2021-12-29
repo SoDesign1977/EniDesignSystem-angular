@@ -20,6 +20,8 @@ import { EniAlertComponent } from './Alert/eni-alert/eni-alert.component';
 import { EniStylesComponent } from './eni-styles/eni-styles.component';
 import { EniButtonComponent } from './Button/eni-button/eni-button.component';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -46,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     EniStylesComponent,
     EniButtonComponent
   ],
-  imports: [ FormsModule],
+  imports: [CommonModule,BrowserModule, FormsModule],
   exports: [
     EnidesignsystemAngularComponent,
     EniCheckboxComponent,

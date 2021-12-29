@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { EniSelectComponent } from './eni-select.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 describe('EniSelectComponent', () => {
   let component: EniSelectComponent;
   let fixture: ComponentFixture<EniSelectComponent>;
@@ -10,7 +11,7 @@ describe('EniSelectComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniSelectComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });

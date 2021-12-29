@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniSelectcheckboxComponent } from './eni-selectcheckbox.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniSelectcheckboxComponent', () => {
   let component: EniSelectcheckboxComponent;
@@ -10,7 +11,7 @@ describe('EniSelectcheckboxComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniSelectcheckboxComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });

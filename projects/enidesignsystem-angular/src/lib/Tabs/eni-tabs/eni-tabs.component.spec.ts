@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EniTabsComponent } from './eni-tabs.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('EniTabsComponent', () => {
   let component: EniTabsComponent;
@@ -10,7 +11,7 @@ describe('EniTabsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EniTabsComponent ],
-      imports: [CommonModule,FormsModule],
+      imports: [BrowserModule, CommonModule,FormsModule],
     })
     .compileComponents();
   });
