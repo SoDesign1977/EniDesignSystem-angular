@@ -1,5 +1,5 @@
 <div
-[class]="'eni-modale eni-modale-'+state + openclass "
+[class]="'eni-modale eni-modale-'+ state + ' ' + openclass "
 
 role="dialog"
 [attr.aria-labelledby]="title"
@@ -28,10 +28,6 @@ ngModel #modale
         </svg>
         
   <h1 id="title">{{title}}</h1>
-
-
-
-
 
   <div class="eni-modale-content"><ng-content></ng-content></div>
   <div *ngIf="closeButton">
