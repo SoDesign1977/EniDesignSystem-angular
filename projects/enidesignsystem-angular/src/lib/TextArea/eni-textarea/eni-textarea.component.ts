@@ -1,7 +1,7 @@
 import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-textarea',
+  selector: 'eni-textarea',
   templateUrl: './eni-textarea.component.html',
   styleUrls: ['./eni-textarea.component.scss']
 })

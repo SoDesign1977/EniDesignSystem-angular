@@ -469,7 +469,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"eni-alert eni-alert-{{state}}\" role=\"alert\">\n\n\n  <svg *ngIf=\"state === 'error'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M26.3053 21.672L17.6415 6.66596C17.1598 5.83155 16.2969 5.33333 15.3333 5.33333C14.3698 5.33333 13.5068 5.83155 13.0251 6.66596L4.36135 21.672C3.87955 22.5065 3.87955 23.5029 4.36135 24.3373C4.84315 25.1718 5.70598 25.67 6.66958 25.67H23.997C24.9606 25.67 25.8235 25.1717 26.3053 24.3374C26.7871 23.5029 26.7871 22.5065 26.3053 21.672ZM25.1553 23.6734C24.9135 24.0921 24.4805 24.3421 23.997 24.3421H6.66958C6.18605 24.3421 5.75309 24.0921 5.51137 23.6734C5.26965 23.2547 5.26965 22.7548 5.51137 22.3361L14.1752 7.32998C14.4169 6.91127 14.8499 6.66132 15.3334 6.66132C15.8168 6.66132 16.2498 6.91127 16.4915 7.32998L25.1553 22.3361C25.397 22.7548 25.397 23.2547 25.1553 23.6734Z\" fill=\"#D0003E\"/>\n    <path d=\"M15.9972 11.9604H14.6693V18.6002H15.9972V11.9604Z\" fill=\"#D0003E\"/>\n    <path d=\"M15.3333 19.9283C14.8452 19.9283 14.448 20.3254 14.448 20.8136C14.448 21.3018 14.8452 21.6989 15.3333 21.6989C15.8215 21.6989 16.2187 21.3018 16.2187 20.8136C16.2187 20.3254 15.8215 19.9283 15.3333 19.9283Z\" fill=\"#D0003E\"/>\n    </svg>\n\n    <svg *ngIf=\"state === 'success'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M21.3267 12.4932C20.9983 12.147 20.4509 12.1317 20.1041 12.4609L14.5828 17.6972L11.9493 14.9933C11.6157 14.6511 11.0689 14.6436 10.7264 14.9772C10.3842 15.3104 10.3769 15.8579 10.7102 16.2001L13.939 19.5151C14.1082 19.6889 14.3331 19.7766 14.5586 19.7766C14.7725 19.7766 14.9864 19.6976 15.1539 19.5393L21.2944 13.7159C21.6409 13.3872 21.6556 12.8398 21.3267 12.4932Z\" fill=\"#3C781C\"/>\n      <path d=\"M16 5.33333C10.1183 5.33333 5.33331 10.1183 5.33331 16C5.33331 21.8817 10.1183 26.6667 16 26.6667C21.8816 26.6667 26.6666 21.8817 26.6666 16C26.6666 10.1183 21.8816 5.33333 16 5.33333ZM16 24.937C11.0723 24.937 7.06302 20.928 7.06302 16C7.06302 11.0723 11.0722 7.06304 16 7.06304C20.928 7.06304 24.9369 11.0722 24.9369 16C24.9369 20.928 20.928 24.937 16 24.937Z\" fill=\"#3C781C\"/>\n      </svg>\n      \n\n      <svg *ngIf=\"state === 'info'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M16 5.33334C10.104 5.33334 5.33331 10.1045 5.33331 16C5.33331 21.896 10.1044 26.6667 16 26.6667C21.8959 26.6667 26.6666 21.8955 26.6666 16C26.6666 10.1041 21.8955 5.33334 16 5.33334ZM16 25C11.0253 25 6.99998 20.9744 6.99998 16C6.99998 11.0253 11.0256 7.00001 16 7.00001C20.9747 7.00001 25 11.0256 25 16C25 20.9747 20.9743 25 16 25Z\" fill=\"#006699\"/>\n        <path d=\"M16 14.2638C15.5398 14.2638 15.1667 14.6368 15.1667 15.0971V20.4635C15.1667 20.9237 15.5398 21.2968 16 21.2968C16.4603 21.2968 16.8334 20.9237 16.8334 20.4634V15.0971C16.8334 14.6368 16.4603 14.2638 16 14.2638Z\" fill=\"#006699\"/>\n        <path d=\"M16 13.2433C16.6213 13.2433 17.125 12.7396 17.125 12.1183C17.125 11.497 16.6213 10.9933 16 10.9933C15.3787 10.9933 14.875 11.497 14.875 12.1183C14.875 12.7396 15.3787 13.2433 16 13.2433Z\" fill=\"#006699\"/>\n        </svg>\n        \n      \n\n    <div class=\"eni-alert-menpssage\">\n      <span tabIndex=\"0\">{{message}}</span>\n     \n        <a *ngIf=\"linkMessage && linkUrl\" class=\"eni-alert-link\" href={`${linkUrl}`}>\n      {{linkMessage}}\n\n\n     <svg *ngIf=\"state === 'info'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#006699\"/>\n      </svg>\n\n      <svg *ngIf=\"state === 'error'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#D0003E\"/>\n        </svg>\n        \n        <svg *ngIf=\"state === 'success'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#3C781C\"/>\n          </svg>\n          \n        </a>\n\n          \n\n    </div>\n  </div>"
+            "templateData": "<div class=\"eni-alert eni-alert-{{state}}\" role=\"alert\">\n\n\n  <svg *ngIf=\"state === 'error'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M26.3053 21.672L17.6415 6.66596C17.1598 5.83155 16.2969 5.33333 15.3333 5.33333C14.3698 5.33333 13.5068 5.83155 13.0251 6.66596L4.36135 21.672C3.87955 22.5065 3.87955 23.5029 4.36135 24.3373C4.84315 25.1718 5.70598 25.67 6.66958 25.67H23.997C24.9606 25.67 25.8235 25.1717 26.3053 24.3374C26.7871 23.5029 26.7871 22.5065 26.3053 21.672ZM25.1553 23.6734C24.9135 24.0921 24.4805 24.3421 23.997 24.3421H6.66958C6.18605 24.3421 5.75309 24.0921 5.51137 23.6734C5.26965 23.2547 5.26965 22.7548 5.51137 22.3361L14.1752 7.32998C14.4169 6.91127 14.8499 6.66132 15.3334 6.66132C15.8168 6.66132 16.2498 6.91127 16.4915 7.32998L25.1553 22.3361C25.397 22.7548 25.397 23.2547 25.1553 23.6734Z\" fill=\"#D0003E\"/>\n    <path d=\"M15.9972 11.9604H14.6693V18.6002H15.9972V11.9604Z\" fill=\"#D0003E\"/>\n    <path d=\"M15.3333 19.9283C14.8452 19.9283 14.448 20.3254 14.448 20.8136C14.448 21.3018 14.8452 21.6989 15.3333 21.6989C15.8215 21.6989 16.2187 21.3018 16.2187 20.8136C16.2187 20.3254 15.8215 19.9283 15.3333 19.9283Z\" fill=\"#D0003E\"/>\n    </svg>\n\n    <svg *ngIf=\"state === 'success'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M21.3267 12.4932C20.9983 12.147 20.4509 12.1317 20.1041 12.4609L14.5828 17.6972L11.9493 14.9933C11.6157 14.6511 11.0689 14.6436 10.7264 14.9772C10.3842 15.3104 10.3769 15.8579 10.7102 16.2001L13.939 19.5151C14.1082 19.6889 14.3331 19.7766 14.5586 19.7766C14.7725 19.7766 14.9864 19.6976 15.1539 19.5393L21.2944 13.7159C21.6409 13.3872 21.6556 12.8398 21.3267 12.4932Z\" fill=\"#3C781C\"/>\n      <path d=\"M16 5.33333C10.1183 5.33333 5.33331 10.1183 5.33331 16C5.33331 21.8817 10.1183 26.6667 16 26.6667C21.8816 26.6667 26.6666 21.8817 26.6666 16C26.6666 10.1183 21.8816 5.33333 16 5.33333ZM16 24.937C11.0723 24.937 7.06302 20.928 7.06302 16C7.06302 11.0723 11.0722 7.06304 16 7.06304C20.928 7.06304 24.9369 11.0722 24.9369 16C24.9369 20.928 20.928 24.937 16 24.937Z\" fill=\"#3C781C\"/>\n      </svg>\n      \n\n      <svg *ngIf=\"state === 'info'\" width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M16 5.33334C10.104 5.33334 5.33331 10.1045 5.33331 16C5.33331 21.896 10.1044 26.6667 16 26.6667C21.8959 26.6667 26.6666 21.8955 26.6666 16C26.6666 10.1041 21.8955 5.33334 16 5.33334ZM16 25C11.0253 25 6.99998 20.9744 6.99998 16C6.99998 11.0253 11.0256 7.00001 16 7.00001C20.9747 7.00001 25 11.0256 25 16C25 20.9747 20.9743 25 16 25Z\" fill=\"#006699\"/>\n        <path d=\"M16 14.2638C15.5398 14.2638 15.1667 14.6368 15.1667 15.0971V20.4635C15.1667 20.9237 15.5398 21.2968 16 21.2968C16.4603 21.2968 16.8334 20.9237 16.8334 20.4634V15.0971C16.8334 14.6368 16.4603 14.2638 16 14.2638Z\" fill=\"#006699\"/>\n        <path d=\"M16 13.2433C16.6213 13.2433 17.125 12.7396 17.125 12.1183C17.125 11.497 16.6213 10.9933 16 10.9933C15.3787 10.9933 14.875 11.497 14.875 12.1183C14.875 12.7396 15.3787 13.2433 16 13.2433Z\" fill=\"#006699\"/>\n        </svg>\n        \n      \n\n    <div class=\"eni-alert-message\">\n      <span tabIndex=\"0\">{{message}}</span>\n     \n        <a *ngIf=\"linkMessage && linkUrl\" class=\"eni-alert-link\" href={`${linkUrl}`}>\n      {{linkMessage}}\n\n\n     <svg *ngIf=\"state === 'info'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#006699\"/>\n      </svg>\n\n      <svg *ngIf=\"state === 'error'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#D0003E\"/>\n        </svg>\n        \n        <svg *ngIf=\"state === 'success'\" class=\"eni-alert-icon\" width=\"12\" height=\"10\" viewBox=\"0 0 12 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M6.53438 0.176401L6.15213 0.537529C6.03196 0.650913 5.96546 0.802481 5.96546 0.963819C5.96546 1.12534 6.03196 1.29062 6.15213 1.404L8.6082 3.73883L0.805098 3.73883C0.453201 3.73883 0.166657 3.98155 0.166657 4.31399L0.166657 4.82499C0.166657 5.15734 0.453201 5.46146 0.805098 5.46146L8.63599 5.46146L6.15213 7.79163C6.03196 7.90519 5.96546 8.04806 5.96546 8.20958C5.96546 8.37092 6.03196 8.51827 6.15213 8.63175L6.53438 8.9909C6.78317 9.22592 7.1879 9.22493 7.4367 8.98992L11.647 5.01079C11.7669 4.8975 11.8333 4.74548 11.8333 4.5828L11.8333 4.5811C11.8333 4.41967 11.7669 4.26801 11.647 4.15472L7.43679 0.176401C7.18809 -0.058793 6.78318 -0.058793 6.53438 0.176401Z\" fill=\"#3C781C\"/>\n          </svg>\n          \n        </a>\n\n          \n\n    </div>\n  </div>"
         },
         {
             "name": "EniBreadcrumbComponent",
@@ -1128,7 +1128,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<fieldset class=\"eni-group-checkbox\" tabindex=\"0\" aria-controls=\"condX\">\n    <input\n        class=\"eni-checkbox-input\"\n        type=\"text\"\n        minLength=\"1\"\n        [name]=\"name\"\n        [attr.aria-required]=\"required\"\n        [required]=\"required\"\n        [(ngModel)]=\"value\"\n      >\n      <legend class=\"eni-group-checkbox-label\">{{legend}}</legend>\n\n          <li\n            *ngFor=\"let element of ListCheckox; let index = index\"\n            role=\"checkbox\"\n            [attr.aria-checked]=\"IsChecked(element.value)\"\n            (click)=\"handleChange(element.value)\"\n           \n            [class]=\" IsDisabled(element) + ' ' + IsSelected(element)\"\n          >\n            <button class=\"checkbox\"[attr.aria-labelledby]=\"name\" [disabled]=\"element.disabled\">\n                <svg width=\"16\" height=\"12\" viewBox=\"0 0 16 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M15.6577 0.552804C15.1843 0.0536718 14.3951 0.0316887 13.8952 0.506255L5.93607 8.05445L2.13978 4.15671C1.65897 3.6634 0.870626 3.65259 0.376899 4.13346C-0.116408 4.61386 -0.126799 5.40304 0.353594 5.89634L5.00808 10.6751C5.252 10.9257 5.57617 11.052 5.90118 11.052C6.20955 11.052 6.51791 10.9381 6.75937 10.71L15.6112 2.31532C16.1107 1.84154 16.1318 1.05236 15.6577 0.552804Z\" fill=\"#808080\"/>\n                    </svg>     \n            </button>\n            <span [id]=\"name\">{{element.value}}</span>\n          </li>\n   \n    </fieldset>"
+            "templateData": "<fieldset class=\"eni-group-checkbox\" tabindex=\"0\" aria-controls=\"condX\">\n    <input\n        class=\"eni-checkbox-input\"\n        type=\"text\"\n        minLength=\"1\"\n        [name]=\"name\"\n        [attr.aria-required]=\"required\"\n        [required]=\"required\"\n        [(ngModel)]=\"value\"\n      >\n      <legend class=\"eni-group-checkbox-label\">{{legend}}</legend>\n\n          <li\n            *ngFor=\"let element of ListCheckox; let index = index\"\n            role=\"checkbox\"\n            [attr.aria-checked]=\"IsChecked(element)\"\n            (click)=\"handleChange(element.value)\"\n           \n            [class]=\" IsDisabled(element) + ' ' + IsSelected(element)\"\n          >\n            <button class=\"checkbox\"[attr.aria-labelledby]=\"name\" [disabled]=\"element.disabled\">\n                <svg width=\"16\" height=\"12\" viewBox=\"0 0 16 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path d=\"M15.6577 0.552804C15.1843 0.0536718 14.3951 0.0316887 13.8952 0.506255L5.93607 8.05445L2.13978 4.15671C1.65897 3.6634 0.870626 3.65259 0.376899 4.13346C-0.116408 4.61386 -0.126799 5.40304 0.353594 5.89634L5.00808 10.6751C5.252 10.9257 5.57617 11.052 5.90118 11.052C6.20955 11.052 6.51791 10.9381 6.75937 10.71L15.6112 2.31532C16.1107 1.84154 16.1318 1.05236 15.6577 0.552804Z\" fill=\"#808080\"/>\n                    </svg>     \n            </button>\n            <span [id]=\"name\">{{element.value}}</span>\n          </li>\n   \n    </fieldset>"
         },
         {
             "name": "EniModaleComponent",
@@ -1255,7 +1255,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div\n[class]=\"'eni-modale eni-modale-'+state + openclass \"\n\nrole=\"dialog\"\n[attr.aria-labelledby]=\"title\"\ntabIndex=\"0\"\n[attr.aria-modal]=\"openStatus\"\n\nngModel #modale\n>\n<div class=\"eni-modale-container\">\n  <svg  *ngIf=\"state === 'error'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M31.25 38H33.75V41H31.25V38ZM31.25 26H33.75V35.0869H31.25V26Z\" fill=\"#D0003E\"/>\n    <path d=\"M29.9379 1.47369C31.0766 -0.491226 33.9234 -0.49123 35.0621 1.47368L64.0992 51.5789C65.2379 53.5439 63.8146 56 61.5371 56H3.46287C1.18545 56 -0.237939 53.5439 0.900771 51.5789L29.9379 1.47369Z\" fill=\"#D0003E\" fill-opacity=\"0.15\"/>\n    </svg>\n    \n\n    <svg *ngIf=\"state === 'success'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32.5\" cy=\"32\" r=\"32\" fill=\"#51A126\" fill-opacity=\"0.15\"/>\n        <path d=\"M29 36.865L24.135 32L22.4784 33.645L29 40.1666L43 26.1666L41.355 24.5216L29 36.865Z\" fill=\"#51A126\"/>\n        </svg>\n        \n\n    <svg *ngIf=\"state === 'info'\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32\" cy=\"32\" r=\"32\" fill=\"#006699\" fill-opacity=\"0.15\"/>\n        <path d=\"M32.0003 27.983C30.9775 27.983 30.1484 28.7796 30.1484 29.7623V41.2207C30.1484 42.2034 30.9775 43 32.0003 43C33.0231 43 33.8521 42.2033 33.8521 41.2206V29.7623C33.8521 28.7796 33.0231 27.983 32.0003 27.983Z\" fill=\"#006699\"/>\n        <path d=\"M32 25.8042C33.3807 25.8042 34.5 24.7288 34.5 23.4021C34.5 22.0755 33.3807 21 32 21C30.6193 21 29.5 22.0755 29.5 23.4021C29.5 24.7288 30.6193 25.8042 32 25.8042Z\" fill=\"#006699\"/>\n        </svg>\n        \n  <h1 id=\"title\">{{title}}</h1>\n\n\n\n\n\n  <div class=\"eni-modale-content\"><ng-content></ng-content></div>\n  <div *ngIf=\"closeButton\">\n      <span id=\"Access-Close-Button\">Fermer</span>\n      <button\n        (click)=\"closeAction()\"\n        aria-labelledby=\"Access-Close-Button\"\n        class=\"eni-modale-button\"\n      >\n      \n      <svg class=\"eni-close\" width=\"68\" height=\"68\" viewBox=\"0 0 68 68\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g filter=\"url(#filter0_d)\">\n        <circle cx=\"34\" cy=\"32\" r=\"24\" fill=\"white\"/>\n        </g>\n        <path d=\"M42.1673 25.4785L40.5223 23.8335L34.0007 30.3552L27.479 23.8335L25.834 25.4785L32.3557 32.0002L25.834 38.5218L27.479 40.1668L34.0007 33.6452L40.5223 40.1668L42.1673 38.5218L35.6457 32.0002L42.1673 25.4785Z\" fill=\"#323232\"/>\n        <defs>\n        <filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"68\" height=\"68\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n        <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n        <feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/>\n        <feOffset dy=\"2\"/>\n        <feGaussianBlur stdDeviation=\"5\"/>\n        <feColorMatrix type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0\"/>\n        <feBlend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/>\n        <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/>\n        </filter>\n        </defs>\n        </svg>\n        \n      </button>\n    </div>\n</div>\n</div>"
+            "templateData": "<div\n[class]=\"'eni-modale eni-modale-'+ state + ' ' + openclass \"\n\nrole=\"dialog\"\n[attr.aria-labelledby]=\"title\"\ntabIndex=\"0\"\n[attr.aria-modal]=\"openStatus\"\n\nngModel #modale\n>\n<div class=\"eni-modale-container\">\n  <svg *ngIf=\"state === 'error'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M31.25 38H33.75V41H31.25V38ZM31.25 26H33.75V35.0869H31.25V26Z\" fill=\"#D0003E\"/>\n    <path d=\"M29.9379 1.47369C31.0766 -0.491226 33.9234 -0.49123 35.0621 1.47368L64.0992 51.5789C65.2379 53.5439 63.8146 56 61.5371 56H3.46287C1.18545 56 -0.237939 53.5439 0.900771 51.5789L29.9379 1.47369Z\" fill=\"#D0003E\" fill-opacity=\"0.15\"/>\n    </svg>\n    \n\n    <svg *ngIf=\"state === 'success'\" width=\"65\" height=\"64\" viewBox=\"0 0 65 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32.5\" cy=\"32\" r=\"32\" fill=\"#51A126\" fill-opacity=\"0.15\"/>\n        <path d=\"M29 36.865L24.135 32L22.4784 33.645L29 40.1666L43 26.1666L41.355 24.5216L29 36.865Z\" fill=\"#51A126\"/>\n        </svg>\n        \n\n    <svg *ngIf=\"state === 'info'\" width=\"64\" height=\"64\" viewBox=\"0 0 64 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"32\" cy=\"32\" r=\"32\" fill=\"#006699\" fill-opacity=\"0.15\"/>\n        <path d=\"M32.0003 27.983C30.9775 27.983 30.1484 28.7796 30.1484 29.7623V41.2207C30.1484 42.2034 30.9775 43 32.0003 43C33.0231 43 33.8521 42.2033 33.8521 41.2206V29.7623C33.8521 28.7796 33.0231 27.983 32.0003 27.983Z\" fill=\"#006699\"/>\n        <path d=\"M32 25.8042C33.3807 25.8042 34.5 24.7288 34.5 23.4021C34.5 22.0755 33.3807 21 32 21C30.6193 21 29.5 22.0755 29.5 23.4021C29.5 24.7288 30.6193 25.8042 32 25.8042Z\" fill=\"#006699\"/>\n        </svg>\n        \n  <h1 id=\"title\">{{title}}</h1>\n\n  <div class=\"eni-modale-content\"><ng-content></ng-content></div>\n  <div *ngIf=\"closeButton\">\n      <span id=\"Access-Close-Button\">Fermer</span>\n      <button\n        (click)=\"closeAction()\"\n        aria-labelledby=\"Access-Close-Button\"\n        class=\"eni-modale-button\"\n      >\n      \n      <svg class=\"eni-close\" width=\"68\" height=\"68\" viewBox=\"0 0 68 68\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <g filter=\"url(#filter0_d)\">\n        <circle cx=\"34\" cy=\"32\" r=\"24\" fill=\"white\"/>\n        </g>\n        <path d=\"M42.1673 25.4785L40.5223 23.8335L34.0007 30.3552L27.479 23.8335L25.834 25.4785L32.3557 32.0002L25.834 38.5218L27.479 40.1668L34.0007 33.6452L40.5223 40.1668L42.1673 38.5218L35.6457 32.0002L42.1673 25.4785Z\" fill=\"#323232\"/>\n        <defs>\n        <filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"68\" height=\"68\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n        <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n        <feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/>\n        <feOffset dy=\"2\"/>\n        <feGaussianBlur stdDeviation=\"5\"/>\n        <feColorMatrix type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0\"/>\n        <feBlend mode=\"normal\" in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/>\n        <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/>\n        </filter>\n        </defs>\n        </svg>\n        \n      </button>\n    </div>\n</div>\n</div>"
         },
         {
             "name": "EniRadioButtonComponent",
@@ -2453,7 +2453,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"element.value === value\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.value}}</label>\n      </div>\n    </div>\n\n</fieldset>"
+            "templateData": "<fieldset\nclass=\"eni-group-square\"\ntabindex=\"0\"\naria-controls=\"condX\"\n[attr.aria-labelledby]=\"name\"\nrole=\"group\"\n>\n<input\n  class=\"eni-square-input\"\n  type=\"text\"\n  [name]=\"name\"\n  [attr.aria-required]=\"required\"\n  [required]=\"required\"\n  [(ngModel)]=\"value\"\n  minLength=\"1\"\n>\n<legend [id]=\"name\" class=\"eni-square-label\">{{legend}}</legend>\n\n    <div\n    *ngFor=\"let element of ListSquare; let index = index\"\n      [class]=\"'eni-square eni-square-box ' + IsDisabled(element)\"\n    >\n      <img [src]=\"element.icon\" alt=\"Icon\" />\n      <button\n        (click)=\"handleChange(element.value)\"\n        [id]=\"'cond'+index\"\n        role=\"checkbox\"\n        [attr.aria-checked]=\"value.includes(element.value)\"\n        [class]=\"'eni-square eni-square-box ' + IsSelected(element) + ' ' +  IsDisabled(element)\"\n        [tabindex]=\"element.disabled ? '-1' : ''\"\n      ></button>\n      <div class=\"eni-square-message\">\n        <label [htmlFor]=\"'cond'+index\">{{element.value}}</label>\n      </div>\n    </div>\n\n</fieldset>"
         },
         {
             "name": "EniSquarelistradioComponent",
@@ -3343,13 +3343,13 @@
     "modules": [
         {
             "name": "EnidesignsystemAngularModule",
-            "id": "module-EnidesignsystemAngularModule-534c69614928ade2fd779e7e63e0f90b",
+            "id": "module-EnidesignsystemAngularModule-c4700ed4132ff9f59ffafcd59cb28e9d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/enidesignsystem-angular/src/lib/enidesignsystem-angular.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { EnidesignsystemAngularComponent } from './enidesignsystem-angular.component';\nimport { EniCheckboxComponent } from './Checkbox/eni-checkbox/eni-checkbox.component';\nimport { EniListcheckboxComponent } from './Checkbox/eni-listcheckbox/eni-listcheckbox.component';\nimport { EniInputComponent } from './Input/eni-input/eni-input.component';\nimport { EniModaleComponent } from './Modale/eni-modale/eni-modale.component';\nimport { EniRadioTextComponent } from './Radio/eni-radio-text/eni-radio-text.component';\nimport { EniRadioButtonComponent } from './Radio/eni-radio-button/eni-radio-button.component';\nimport { EniSelectComponent } from './Select/eni-select/eni-select.component';\nimport { EniSelectcheckboxComponent } from './Select/eni-selectcheckbox/eni-selectcheckbox.component';\nimport { EniSquarecheckboxComponent } from './Square/eni-squarecheckbox/eni-squarecheckbox.component';\nimport { EniSquarelistcheckboxComponent } from './Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component';\nimport { EniSquarelistradioComponent } from './Square/eni-squarelistradio/eni-squarelistradio.component';\nimport { EniStatusComponent } from './Status/eni-status/eni-status.component';\nimport { EniSwitchComponent } from './Switch/eni-switch/eni-switch.component';\nimport { EniTabsComponent } from './Tabs/eni-tabs/eni-tabs.component';\nimport { EniTextareaComponent } from './TextArea/eni-textarea/eni-textarea.component';\nimport { EniTooltipComponent } from './Tooltip/eni-tooltip/eni-tooltip.component';\nimport { EniAlertComponent } from './Alert/eni-alert/eni-alert.component';\nimport { EniStylesComponent } from './eni-styles/eni-styles.component';\nimport { EniButtonComponent } from './Button/eni-button/eni-button.component';\nimport { FormsModule } from '@angular/forms';\n\n\n\n@NgModule({\n  declarations: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent\n  ],\n  imports: [ FormsModule],\n  exports: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent\n  ]\n})\nexport class EnidesignsystemAngularModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { EnidesignsystemAngularComponent } from './enidesignsystem-angular.component';\nimport { EniCheckboxComponent } from './Checkbox/eni-checkbox/eni-checkbox.component';\nimport { EniListcheckboxComponent } from './Checkbox/eni-listcheckbox/eni-listcheckbox.component';\nimport { EniInputComponent } from './Input/eni-input/eni-input.component';\nimport { EniModaleComponent } from './Modale/eni-modale/eni-modale.component';\nimport { EniRadioTextComponent } from './Radio/eni-radio-text/eni-radio-text.component';\nimport { EniRadioButtonComponent } from './Radio/eni-radio-button/eni-radio-button.component';\nimport { EniSelectComponent } from './Select/eni-select/eni-select.component';\nimport { EniSelectcheckboxComponent } from './Select/eni-selectcheckbox/eni-selectcheckbox.component';\nimport { EniSquarecheckboxComponent } from './Square/eni-squarecheckbox/eni-squarecheckbox.component';\nimport { EniSquarelistcheckboxComponent } from './Square/eni-squarelistcheckbox/eni-squarelistcheckbox.component';\nimport { EniSquarelistradioComponent } from './Square/eni-squarelistradio/eni-squarelistradio.component';\nimport { EniStatusComponent } from './Status/eni-status/eni-status.component';\nimport { EniSwitchComponent } from './Switch/eni-switch/eni-switch.component';\nimport { EniTabsComponent } from './Tabs/eni-tabs/eni-tabs.component';\nimport { EniTextareaComponent } from './TextArea/eni-textarea/eni-textarea.component';\nimport { EniTooltipComponent } from './Tooltip/eni-tooltip/eni-tooltip.component';\nimport { EniAlertComponent } from './Alert/eni-alert/eni-alert.component';\nimport { EniStylesComponent } from './eni-styles/eni-styles.component';\nimport { EniButtonComponent } from './Button/eni-button/eni-button.component';\nimport { FormsModule } from '@angular/forms';\nimport { CommonModule } from '@angular/common';\nimport { BrowserModule } from '@angular/platform-browser';\n\n\n\n@NgModule({\n  declarations: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent\n  ],\n  imports: [CommonModule,BrowserModule, FormsModule],\n  exports: [\n    EnidesignsystemAngularComponent,\n    EniCheckboxComponent,\n    EniListcheckboxComponent,\n    EniInputComponent,\n    EniModaleComponent,\n    EniRadioTextComponent,\n    EniRadioButtonComponent,\n    EniSelectComponent,\n    EniSelectcheckboxComponent,\n    EniSquarecheckboxComponent,\n    EniSquarelistcheckboxComponent,\n    EniSquarelistradioComponent,\n    EniStatusComponent,\n    EniSwitchComponent,\n    EniTabsComponent,\n    EniTextareaComponent,\n    EniTooltipComponent,\n    EniAlertComponent,\n    EniStylesComponent,\n    EniButtonComponent\n  ]\n})\nexport class EnidesignsystemAngularModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -3536,7 +3536,7 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Checkbox/eni-checkbox/Eni-Checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3546,7 +3546,7 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Checkbox/eni-checkbox/Eni-Checkbox.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3576,16 +3576,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Checkbox/eni-checkbox/Eni-Checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3606,37 +3596,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistcheckbox/Eni-squarelistcheckbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistradio/Eni-squarelistradio.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3676,6 +3636,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Select/eni-selectcheckbox/Eni-SelectCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3686,7 +3656,27 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Tabs/eni-tabs/Eni-Tabs.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistcheckbox/Eni-squarelistcheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarelistradio/Eni-squarelistradio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3697,6 +3687,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Switch/eni-switch/Eni-Switch.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Tabs/eni-tabs/Eni-Tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -3726,26 +3726,6 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Select/eni-select/Eni-Select.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -3756,7 +3736,27 @@
                 "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Select/eni-selectcheckbox/Eni-SelectCheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Square/eni-squarecheckbox/Eni-SquareCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -4105,11 +4105,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Alert/eni-alert/Eni-Alert.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<EniBreadcrumbComponent>",
-                "defaultValue": "(args: EniBreadcrumbComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<EniAlertComponent>",
+                "defaultValue": "(args: EniAlertComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4120,16 +4120,6 @@
                 "deprecationMessage": "",
                 "type": "Story<EniButtonComponent>",
                 "defaultValue": "(args: EniButtonComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Alert/eni-alert/Eni-Alert.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniAlertComponent>",
-                "defaultValue": "(args: EniAlertComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4155,6 +4145,46 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniBreadcrumbComponent>",
+                "defaultValue": "(args: EniBreadcrumbComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniRadioButtonComponent>",
+                "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniRadioTextComponent>",
+                "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Select/eni-select/Eni-Select.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniSelectComponent>",
+                "defaultValue": "(args: EniSelectComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -4170,6 +4200,16 @@
                 "deprecationMessage": "",
                 "type": "Story<EniModaleComponent>",
                 "defaultValue": "(args: EniModaleComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/Select/eni-selectcheckbox/Eni-SelectCheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniSelectcheckboxComponent>",
+                "defaultValue": "(args: EniSelectcheckboxComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4205,61 +4245,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniRadioButtonComponent>",
-                "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniRadioTextComponent>",
-                "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/enidesignsystem-angular/src/lib/Status/eni-status/Eni-Status.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<EniStatusComponent>",
                 "defaultValue": "(args: EniStatusComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Select/eni-select/Eni-Select.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniSelectComponent>",
-                "defaultValue": "(args: EniSelectComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Select/eni-selectcheckbox/Eni-SelectCheckbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniSelectcheckboxComponent>",
-                "defaultValue": "(args: EniSelectcheckboxComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/Tabs/eni-tabs/Eni-Tabs.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<EniTabsComponent>",
-                "defaultValue": "(args: EniTabsComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4275,11 +4265,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/enidesignsystem-angular/src/lib/TextArea/eni-textarea/Eni-Textarea.stories.ts",
+                "file": "projects/enidesignsystem-angular/src/lib/Tabs/eni-tabs/Eni-Tabs.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<EniTextareaComponent>",
-                "defaultValue": "(args: EniTextareaComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<EniTabsComponent>",
+                "defaultValue": "(args: EniTabsComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -4290,6 +4280,16 @@
                 "deprecationMessage": "",
                 "type": "Story<EniTooltipComponent>",
                 "defaultValue": "(args: EniTooltipComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/enidesignsystem-angular/src/lib/TextArea/eni-textarea/Eni-Textarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<EniTextareaComponent>",
+                "defaultValue": "(args: EniTextareaComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "TertiaryArrow",
@@ -4482,48 +4482,6 @@
                     "defaultValue": "(args: EniSelectcheckboxComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts": [
-                {
-                    "name": "Checked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<EniBreadcrumbComponent>",
-                    "defaultValue": "(args: EniBreadcrumbComponent) => ({\r\n  props: args,\r\n})"
-                },
-                {
-                    "name": "WithoutText",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                }
-            ],
             "projects/enidesignsystem-angular/src/lib/Checkbox/eni-checkbox/Eni-Checkbox.stories.ts": [
                 {
                     "name": "Checked",
@@ -4574,6 +4532,48 @@
                     "deprecationMessage": "",
                     "type": "Story<EniCheckboxComponent>",
                     "defaultValue": "(args: EniCheckboxComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts": [
+                {
+                    "name": "Checked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<EniBreadcrumbComponent>",
+                    "defaultValue": "(args: EniBreadcrumbComponent) => ({\r\n  props: args,\r\n})"
+                },
+                {
+                    "name": "WithoutText",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Breadcrumb/eni-breadcrumb/Eni-Breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "projects/enidesignsystem-angular/src/lib/Switch/eni-switch/Eni-Switch.stories.ts": [
@@ -4669,6 +4669,50 @@
                     "deprecationMessage": "",
                     "type": "Story<EniListcheckboxComponent>",
                     "defaultValue": "(args: EniListcheckboxComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<EniRadioButtonComponent>",
+                    "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<EniRadioTextComponent>",
+                    "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "projects/enidesignsystem-angular/src/lib/Input/eni-input/Eni-Input.stories.ts": [
@@ -4797,50 +4841,6 @@
                     "deprecationMessage": "",
                     "type": "Story<EniSquarelistradioComponent>",
                     "defaultValue": "(args: EniSquarelistradioComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-button/Eni-Radio-Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<EniRadioButtonComponent>",
-                    "defaultValue": "(args: EniRadioButtonComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/enidesignsystem-angular/src/lib/Radio/eni-radio-text/Eni-Radio-Text.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<EniRadioTextComponent>",
-                    "defaultValue": "(args: EniRadioTextComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "projects/enidesignsystem-angular/src/lib/Tabs/eni-tabs/Eni-Tabs.stories.ts": [

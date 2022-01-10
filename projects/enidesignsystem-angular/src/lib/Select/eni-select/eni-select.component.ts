@@ -1,7 +1,7 @@
 import { Component, OnInit,Input,AfterContentChecked } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-select',
+  selector: 'eni-select',
   templateUrl: './eni-select.component.html',
   styleUrls: ['./eni-select.component.scss']
 })

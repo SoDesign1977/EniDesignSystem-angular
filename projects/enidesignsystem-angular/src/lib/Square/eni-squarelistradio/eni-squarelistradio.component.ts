@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-squarelistradio',
+  selector: 'eni-squarelistradio',
   templateUrl: './eni-squarelistradio.component.html',
   styleUrls: ['./eni-squarelistradio.component.scss']
 })

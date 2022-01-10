@@ -1,7 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-listcheckbox',
+  selector: 'eni-listcheckbox',
   templateUrl: './eni-listcheckbox.component.html',
   styleUrls: ['./eni-listcheckbox.component.scss']
 })

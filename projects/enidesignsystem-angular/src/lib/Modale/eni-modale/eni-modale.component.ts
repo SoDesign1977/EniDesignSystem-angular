@@ -1,7 +1,7 @@
 import { Component, OnInit,Input ,ViewChild,ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-modale',
+  selector: 'eni-modale',
   templateUrl: './eni-modale.component.html',
   styleUrls: ['./eni-modale.component.scss']
 })

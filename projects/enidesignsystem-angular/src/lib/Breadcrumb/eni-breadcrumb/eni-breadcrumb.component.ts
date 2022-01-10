@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'app-eni-breadcrumb',
+  selector: 'eni-breadcrumb',
   templateUrl: './eni-breadcrumb.component.html',
   styleUrls: ['./eni-breadcrumb.component.scss']
 })

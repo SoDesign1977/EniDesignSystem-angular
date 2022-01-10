@@ -1,7 +1,7 @@
 import { Component, OnInit,Input,Output ,EventEmitter} from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-switch',
+  selector: 'eni-switch',
   templateUrl: './eni-switch.component.html',
   styleUrls: ['./eni-switch.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-status',
+  selector: 'eni-status',
   templateUrl: './eni-status.component.html',
   styleUrls: ['./eni-status.component.scss']
 })

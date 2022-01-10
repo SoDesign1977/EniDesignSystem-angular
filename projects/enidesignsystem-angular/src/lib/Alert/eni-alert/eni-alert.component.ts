@@ -1,7 +1,7 @@
 import { Component,Input,Output, OnInit,ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-alert',
+  selector: 'eni-alert',
   templateUrl: './eni-alert.component.html',
   styleUrls: ['./eni-alert.component.scss']
 })

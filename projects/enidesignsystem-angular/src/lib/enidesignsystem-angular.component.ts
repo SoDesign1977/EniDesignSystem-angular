@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-enidesignsystem-angular',
+  selector: 'enidesignsystem-angular',
   template: `
     <p>
       enidesignsystem-angular works!

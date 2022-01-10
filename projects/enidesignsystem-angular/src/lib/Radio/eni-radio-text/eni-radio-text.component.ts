@@ -2,7 +2,7 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
 
-  selector: 'lib-eni-radio-text',
+  selector: 'eni-radio-text',
   templateUrl: './eni-radio-text.component.html',
   styleUrls: ['./eni-radio-text.component.scss']
 })

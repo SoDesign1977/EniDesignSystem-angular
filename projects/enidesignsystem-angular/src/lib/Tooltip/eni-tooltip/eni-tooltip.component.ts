@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-tooltip',
+  selector: 'eni-tooltip',
   templateUrl: './eni-tooltip.component.html',
   styleUrls: ['./eni-tooltip.component.scss']
 })

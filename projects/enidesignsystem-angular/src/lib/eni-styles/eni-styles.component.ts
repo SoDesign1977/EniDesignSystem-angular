@@ -1,7 +1,7 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-styles',
+  selector: 'eni-styles',
   templateUrl: './eni-styles.component.html',
   styleUrls: ['./eni-styles.component.scss'],
   encapsulation: ViewEncapsulation.None

@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-button',
+  selector: 'eni-button',
   templateUrl: './eni-button.component.html',
   styleUrls: ['./eni-button.component.scss']
 })

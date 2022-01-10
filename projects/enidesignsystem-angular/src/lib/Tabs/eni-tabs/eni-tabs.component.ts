@@ -2,7 +2,7 @@ import { Template } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-tabs',
+  selector: 'eni-tabs',
   templateUrl: './eni-tabs.component.html',
   styleUrls: ['./eni-tabs.component.scss']
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-eni-squarecheckbox',
+  selector: 'eni-squarecheckbox',
   templateUrl: './eni-squarecheckbox.component.html',
   styleUrls: ['./eni-squarecheckbox.component.scss']
 })
